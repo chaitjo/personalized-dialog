@@ -108,7 +108,7 @@ if __name__ == '__main__':
             "where should it be",
             "where should it be located",
             "where should it be located",
-            "may i know where the restaurant should be located"
+            "may i know where the restaurant should be located",
             "could you tell me where the restaurant should be located"),
     
         "which price range are looking for" : ("what should the price be",

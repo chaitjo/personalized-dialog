@@ -92,7 +92,9 @@ class chatBot(object):
         print("Average story length", mean_story_size)
 
     def interactive(self):
-        context=[]
+        context=[['female', 'young', '$r', '#0']]
+        # context = []
+
         u=None
         r=None
         nid=1
@@ -101,10 +103,12 @@ class chatBot(object):
             if line=='exit':
                 break
             if line=='restart':
-                context=[]
+                context=[['male', 'young', '$r', '#0']]
+                # context = []
                 nid=1
-                print("clear memory")
+                print("clear memory")        
                 continue
+            
             u=tokenize(line)
             data=[(context,u,-1)]
             s,q,a=vectorize_data(data, self.word_idx, self.sentence_size, self.batch_size, self.n_cand, self.memory_size)
