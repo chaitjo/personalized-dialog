@@ -1,0 +1,3 @@
+python single_dialog.py --epochs 50 --task_id 1 --train True
+python single_dialog.py --epochs 50 --memory_size 150 --task_id 2 --train True &>> log.txt
+python single_dialog.py --epochs 50 --task_id 3 --train True &>> log.txt

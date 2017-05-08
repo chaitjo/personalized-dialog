@@ -19,7 +19,7 @@ tf.flags.DEFINE_integer("batch_size", 32, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
 tf.flags.DEFINE_integer("epochs", 200, "Number of epochs to train for.")
 tf.flags.DEFINE_integer("embedding_size", 20, "Embedding size for embedding matrices.")
-tf.flags.DEFINE_integer("memory_size", 50, "Maximum size of memory.")
+tf.flags.DEFINE_integer("memory_size", 150, "Maximum size of memory.")
 tf.flags.DEFINE_integer("task_id", 1, "bAbI task id, 1 <= id <= 6")
 tf.flags.DEFINE_integer("random_state", None, "Random state.")
 tf.flags.DEFINE_string("data_dir", "../data/modified-tasks/", "Directory containing bAbI tasks")
@@ -137,6 +137,7 @@ class chatBot(object):
         best_validation_accuracy=0
         
         for t in range(1, self.epochs+1):
+            print('Epoch', t)
             np.random.shuffle(batches)
             total_cost = 0.0
             for start, end in batches:
