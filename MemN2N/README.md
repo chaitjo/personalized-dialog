@@ -49,15 +49,14 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 Unless specified, the Adam optimizer was used.
 
 The following params were used:
-* epochs: 30 (Task 1), 10 (Task 2)
+* epochs: 200
 * learning_rate: 0.01
 * epsilon: 1e-8
 * embedding_size: 20
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
-1     |  99.2	            |  98.9		            |  98.8				 |	74.4
-2     |  99.9               |  99.8 	            |  99.8				 |	78.8
+
 
 ### Notes
 

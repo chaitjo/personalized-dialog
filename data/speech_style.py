@@ -13,8 +13,8 @@ def modify_speech_style(dialogs, utterences, setting='babi'):
     new_dialogs = []
     profiles = ['male young', 'female young', 'male middle-aged', 'female middle-aged', 'male elderly', 'female elderly']
     for dialog in dialogs:
+        temp_dialog_set = []
         if setting=='modified':
-            temp_dialog_set = []
             for profile in profiles:
                 temp_dialog_set.append([[profile + ' ' + dialog[0][0]]])
             dialog = dialog[1:]

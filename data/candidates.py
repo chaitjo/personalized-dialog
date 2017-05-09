@@ -16,7 +16,20 @@ def modify_candidates(candidates, utterences):
         pattern, data = process_utterence(candidate)
         for modified_response in set(utterences[pattern]):
             if pattern=='api_call':
-                new_candidates.append('1 ' + modified_response + data)   
+                new_candidates.append('1 ' + modified_response + data)
+            elif pattern=='here it is':
+                if 'phone' in data:
+                    d = data.split('_phone')[0]
+                    new_candidates.append('1 ' + modified_response + d + '_1_phone')
+                    new_candidates.append('1 ' + modified_response + d + '_1_social_media')
+                    new_candidates.append('1 ' + modified_response + d + '_2_phone')
+                    new_candidates.append('1 ' + modified_response + d + '_2_social_media')
+                elif 'address' in data:
+                    d = data.split('_address')[0]
+                    new_candidates.append('1 ' + modified_response + d + '_1_address' + d + '_1_public_transport')
+                    new_candidates.append('1 ' + modified_response + d + '_1_address' + d + '_1_parking')
+                    new_candidates.append('1 ' + modified_response + d + '_2_address' + d + '_2_public_transport')
+                    new_candidates.append('1 ' + modified_response + d + '_2_address' + d + '_2_parking')
             elif data:
                 new_candidates.append('1 ' + modified_response + data + '_1')
                 new_candidates.append('1 ' + modified_response + data + '_2')

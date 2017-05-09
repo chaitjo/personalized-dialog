@@ -3,8 +3,9 @@ from speech_style import *
 from kb import *
 
 
-def get_restaurants(dialog, shuffle=True):
+def get_restaurants(dialog, shuffle=True, mode='babi'):
     old_restaurants = []
+    if mode == 'modified' : dialog = dialog[1:]
     for turn in dialog:
         if len(turn) == 1:
             old_restaurants.append(turn[0].split(' ')[0])
@@ -42,7 +43,7 @@ def modify_options(dialogs, kb, accept_prob=0.25):
                            [['non-veg ' + np.random.choice(list(specialities))]]]
 
         for restaurant in restaurants:
-            attrib_list = ['R_phone', 'R_cuisine', 'R_address', 'R_location', 'R_number', 'R_price', 'R_rating', 'R_type', 'R_speciality']
+            attrib_list = ['R_phone', 'R_cuisine', 'R_address', 'R_location', 'R_number', 'R_price', 'R_rating', 'R_type', 'R_speciality', 'R_social_media', 'R_parking', 'R_public_transport']
             for temp_dialog in temp_dialog_set:
                 for attrib in attrib_list:
                     temp_dialog.append([restaurant + ' ' + attrib + ' ' + kb[restaurant][attrib]])

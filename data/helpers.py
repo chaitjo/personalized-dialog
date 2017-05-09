@@ -151,7 +151,7 @@ def read_babi(fname):
     return dialogs
 
 
-def save_babi(dialogs, fname, shuffle=False):
+def save_babi(dialogs, fname, shuffle=True):
     if shuffle:
         np.random.shuffle(dialogs)
     with open(fname, 'w', encoding='utf-8') as f:
