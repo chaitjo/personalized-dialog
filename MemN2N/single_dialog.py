@@ -91,6 +91,11 @@ class chatBot(object):
         print("Longest story length", max_story_size)
         print("Average story length", mean_story_size)
 
+        with open('v.txt', 'w', encoding='utf-8') as f:
+            for item in vocab:
+                f.write(item+'\n')
+
+
     def interactive(self):
         context=[['female', 'young', '$r', '#0']]
         # context = []

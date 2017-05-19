@@ -16,27 +16,27 @@ def modify_info(dialogs, kb, utterences):
         for turn in dialog:
             if len(turn) == 2:
                 if restaurant[:-2] in turn[0]:
-                	turn[0] = turn[0].replace(restaurant[:-2], restaurant)
+                    turn[0] = turn[0].replace(restaurant[:-2], restaurant)
                 queries = {
-                	'contact' : ['do you have its contact details',
-                				'may i have the contact details of the restaurant',
-                				'what are the contact details of the restaurant'],
-                	'directions' : ['do you have direction information',
-                				'may i have the direction information to the restaurant',
-                				'can you provide direction to the restaurant']
+                    'contact' : ['do you have its contact details',
+                                'may i have the contact details of the restaurant',
+                                'what are the contact details of the restaurant'],
+                    'directions' : ['do you have direction information',
+                                'may i have the direction information to the restaurant',
+                                'can you provide direction to the restaurant']
                 }
                 if 'phone number' in turn[0]:
-                	turn[0] = np.random.choice(queries['contact'])
-                	if temp_dialog[0][0].split(' ')[1] == 'young':
-                		turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_social_media']
-                	else:
-                		turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_phone']
+                    turn[0] = np.random.choice(queries['contact'])
+                    if temp_dialog[0][0].split(' ')[1] == 'young':
+                        turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_social_media']
+                    else:
+                        turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_phone']
                 if 'address' in turn[0]:
-                	turn[0] = np.random.choice(queries['directions'])
-                if kb[restaurant]['R_price'] == 'cheap':
-                    turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_address'] + ' ' + kb[restaurant]['R_public_transport']
-                else:
-                    turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_address'] + ' ' + kb[restaurant]['R_parking']
+                    turn[0] = np.random.choice(queries['directions'])
+                    if kb[restaurant]['R_price'] == 'cheap':
+                        turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_address'] + ' ' + kb[restaurant]['R_public_transport']
+                    else:
+                        turn[1] = utterences['here it is'][profile] + ' ' + kb[restaurant]['R_address'] + ' ' + kb[restaurant]['R_parking']
                 temp_dialog.append(turn)
         new_dialogs.append(temp_dialog)
     return new_dialogs
