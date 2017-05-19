@@ -1,4 +1,5 @@
 #!/bin/bash
+source activate deep-learning
 # python single_dialog.py --task_id 1
 # python single_dialog.py --task_id 2
 # python single_dialog.py --task_id 3
