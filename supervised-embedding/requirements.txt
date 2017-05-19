@@ -1,0 +1,2 @@
+# tensorflow==1.0.0 (install it by yourself for gpu)
+numpy==1.12.0
