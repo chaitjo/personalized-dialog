@@ -102,30 +102,30 @@ def modify_info(dialogs, kb, utterences):
 
 if __name__ == '__main__':
     utterences = load_utterences()
-    kb = read_kb('modified-tasks/modified-kb-all.txt')
+    kb = read_kb('../modified-tasks/modified-kb-all.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, 'modified-tasks/modified-task5-full-dialogs-dev.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task5-full-dialogs-dev.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, 'modified-tasks/modified-task5-full-dialogs-trn.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task5-full-dialogs-trn.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, 'modified-tasks/modified-task5-full-dialogs-tst.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task5-full-dialogs-tst.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, 'modified-tasks/modified-task5-full-dialogs-tst-OOV.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task5-full-dialogs-tst-OOV.txt')
 
 

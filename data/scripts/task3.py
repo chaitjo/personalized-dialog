@@ -82,24 +82,24 @@ def modify_options(dialogs, kb, accept_prob=0.25):
 
 if __name__ == '__main__':
     utterences = load_utterences()
-    kb = read_kb('modified-tasks/modified-kb-all.txt')
+    kb = read_kb('../modified-tasks/modified-kb-all.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task3-options-dev.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-dev.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
-    save_babi(new_dialogs, 'modified-tasks/modified-task3-options-dev.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task3-options-dev.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task3-options-trn.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-trn.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
-    save_babi(new_dialogs, 'modified-tasks/modified-task3-options-trn.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task3-options-trn.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task3-options-tst.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
-    save_babi(new_dialogs, 'modified-tasks/modified-task3-options-tst.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task3-options-tst.txt')
 
-    dialogs = read_babi('dialog-bAbI-tasks/dialog-babi-task3-options-tst-OOV.txt')
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst-OOV.txt')
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
-    save_babi(new_dialogs, 'modified-tasks/modified-task3-options-tst-OOV.txt')
+    save_babi(new_dialogs, '../modified-tasks/modified-task3-options-tst-OOV.txt')

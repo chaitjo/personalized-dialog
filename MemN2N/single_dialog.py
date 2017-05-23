@@ -90,14 +90,11 @@ class chatBot(object):
         print("Longest candidate sentence length", self.candidate_sentence_size)
         print("Longest story length", max_story_size)
         print("Average story length", mean_story_size)
-
-        with open('v.txt', 'w', encoding='utf-8') as f:
-            for item in vocab:
-                f.write(item+'\n')
+        
 
 
     def interactive(self):
-        context=[['female', 'young', '$r', '#0']]
+        context=[['male', 'young', '$r', '#0']]
         # context = []
 
         u=None
@@ -108,7 +105,7 @@ class chatBot(object):
             if line=='exit':
                 break
             if line=='restart':
-                context=[['male', 'young', '$r', '#0']]
+                context=[['female', 'young', '$r', '#0']]
                 # context = []
                 nid=1
                 print("clear memory")        
@@ -193,6 +190,8 @@ class chatBot(object):
             test_preds=self.batch_predict(testS,testQ,n_test)
             test_acc = metrics.accuracy_score(test_preds, testA)
             print("Testing Accuracy:", test_acc)
+
+            # print(test_preds, testA)
 
     def batch_predict(self,S,Q,n):
         preds=[]

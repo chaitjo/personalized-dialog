@@ -171,7 +171,7 @@ class MemN2NDialog(object):
             q_emb = tf.nn.embedding_lookup(self.A, queries)
             u_0 = tf.reduce_sum(q_emb, 1)
             u = [u_0]
-            for _ in range(self._hops):
+            for count in range(self._hops):
                 m_emb = tf.nn.embedding_lookup(self.A, stories)
                 m = tf.reduce_sum(m_emb, 2)
                 # hack to get around no reduce_dot
@@ -180,6 +180,7 @@ class MemN2NDialog(object):
 
                 # Calculate probabilities
                 probs = tf.nn.softmax(dotted)
+                # probs = tf.Print(probs, [count, tf.shape(probs), probs], summarize=200)
 
                 probs_temp = tf.transpose(tf.expand_dims(probs, -1), [0, 2, 1])
                 c_temp = tf.transpose(m, [0, 2, 1])

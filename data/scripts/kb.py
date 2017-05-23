@@ -57,6 +57,6 @@ def save_kb(kb, fname):
 
 if __name__ == '__main__':
     specialities = load_specialities()
-    kb = read_kb('dialog-bAbI-tasks/dialog-babi-kb-all.txt')
+    kb = read_kb('../dialog-bAbI-tasks/dialog-babi-kb-all.txt')
     new_kb = modify_kb(kb, specialities)
-    save_kb(new_kb, 'modified-tasks/modified-kb-all.txt')
+    save_kb(new_kb, '../modified-tasks/modified-kb-all.txt')

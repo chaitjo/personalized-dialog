@@ -47,6 +47,6 @@ def save_candidates(candidates, fname, shuffle=False):
 
 if __name__ == '__main__':
     utterences = load_utterences()
-    candidates = read_candidates('dialog-bAbI-tasks/dialog-babi-candidates.txt')
+    candidates = read_candidates('../dialog-bAbI-tasks/dialog-babi-candidates.txt')
     new_candidates = modify_candidates(candidates, utterences)
-    save_candidates(new_candidates, 'modified-tasks/modified-candidates.txt', True)
+    save_candidates(new_candidates, '../modified-tasks/modified-candidates.txt', True)
