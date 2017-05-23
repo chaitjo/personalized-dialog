@@ -9,7 +9,7 @@ def process_utterence(utterence):
     return (utterence, '')
 
 
-def modify_speech_style(dialogs, utterences, setting='babi'):
+def modify_speech_style(dialogs, utterences, setting='babi', save='all'):
     new_dialogs = []
     profiles = ['male young', 'female young', 'male middle-aged', 'female middle-aged', 'male elderly', 'female elderly']
     for dialog in dialogs:
@@ -32,6 +32,9 @@ def modify_speech_style(dialogs, utterences, setting='babi'):
             else:
                 for i in range(len(temp_dialog_set)):
                     temp_dialog_set[i].append(turn)
-        for temp_dialog in temp_dialog_set:
-            new_dialogs.append(temp_dialog)
+        if save=='random':
+            new_dialogs.append(temp_dialog_set[np.random.choice(len(temp_dialog_set))])
+        else:
+            for temp_dialog in temp_dialog_set:
+                new_dialogs.append(temp_dialog)
     return new_dialogs

@@ -45,7 +45,7 @@ def modify_info(dialogs, kb, utterences):
 if __name__ == '__main__':
     utterences = load_utterences()
     kb = read_kb('../modified-tasks/modified-kb-all.txt')
-    
+
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task4-phone-address-dev.txt')
     new_dialogs = modify_speech_style(dialogs, utterences)
     new_dialogs = modify_info(new_dialogs, kb, utterences)
@@ -65,4 +65,25 @@ if __name__ == '__main__':
     new_dialogs = modify_speech_style(dialogs, utterences)
     new_dialogs = modify_info(new_dialogs, kb, utterences)
     save_babi(new_dialogs, '../modified-tasks/modified-task4-info-tst-OOV.txt')
+
+    # 1000 dialogs set
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task4-phone-address-dev.txt')
+    new_dialogs = modify_speech_style(dialogs, utterences, save='random')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task4-info-dev.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task4-phone-address-trn.txt')
+    new_dialogs = modify_speech_style(dialogs, utterences, save='random')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task4-info-trn.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task4-phone-address-tst.txt')
+    new_dialogs = modify_speech_style(dialogs, utterences, save='random')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task4-info-tst.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task4-phone-address-tst-OOV.txt')
+    new_dialogs = modify_speech_style(dialogs, utterences, save='random')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task4-info-tst-OOV.txt')
 

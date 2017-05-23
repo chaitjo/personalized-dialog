@@ -33,7 +33,7 @@ def rank_restaurants(restaurants, diet, fav_item, kb):
     return sorted(ranked, key=getItem, reverse=True)
 
 
-def modify_options(dialogs, kb, accept_prob=0.25):
+def modify_options(dialogs, kb, accept_prob=0.25, save='all'):
     new_dialogs = []
     for dialog in dialogs:
         restaurants = get_restaurants(dialog)
@@ -76,7 +76,11 @@ def modify_options(dialogs, kb, accept_prob=0.25):
                 else :
                     temp_dialog.append([np.random.choice(utterences['reject']), 'sure let me find an other option for you'])
 
-            new_dialogs.append(temp_dialog)
+        if save=='random':
+            new_dialogs.append(temp_dialog_set[np.random.choice(len(temp_dialog_set))])
+        else:
+            for temp_dialog in temp_dialog_set:
+                new_dialogs.append(temp_dialog)
     return new_dialogs
 
 
@@ -103,3 +107,24 @@ if __name__ == '__main__':
     new_dialogs = modify_options(dialogs, kb)
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     save_babi(new_dialogs, '../modified-tasks/modified-task3-options-tst-OOV.txt')
+
+    # 1000 dialogs set
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-dev.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-trn.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-tst.txt')
+
+    dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
+    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-tst-OOV.txt')
