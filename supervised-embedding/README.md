@@ -1,7 +1,7 @@
 # Description
 
 Implementation of Supervised Embedding model from
-[[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683)]. Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/sld/supervised-embedding-model) code.
+[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683). Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/sld/supervised-embedding-model) code.
 
 ### Usage
 
