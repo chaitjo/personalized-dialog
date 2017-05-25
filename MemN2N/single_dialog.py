@@ -19,10 +19,10 @@ tf.flags.DEFINE_integer("batch_size", 32, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
 tf.flags.DEFINE_integer("epochs", 200, "Number of epochs to train for.")
 tf.flags.DEFINE_integer("embedding_size", 20, "Embedding size for embedding matrices.")
-tf.flags.DEFINE_integer("memory_size", 200, "Maximum size of memory.")
+tf.flags.DEFINE_integer("memory_size", 250, "Maximum size of memory.")
 tf.flags.DEFINE_integer("task_id", 1, "bAbI task id, 1 <= id <= 6")
 tf.flags.DEFINE_integer("random_state", None, "Random state.")
-tf.flags.DEFINE_string("data_dir", "../data/modified-tasks/1000/", "Directory containing bAbI tasks")
+tf.flags.DEFINE_string("data_dir", "../data/modified-tasks/", "Directory containing bAbI tasks")
 tf.flags.DEFINE_string("model_dir", "model/", "Directory containing memn2n model checkpoints")
 tf.flags.DEFINE_boolean('train', True, 'if True, begin to train')
 tf.flags.DEFINE_boolean('interactive', False, 'if True, interactive')
@@ -32,7 +32,7 @@ print("Started Task:", FLAGS.task_id)
 
 
 class chatBot(object):
-    def __init__(self,data_dir,model_dir,task_id,isInteractive=True,OOV=False,memory_size=50,random_state=None,batch_size=32,learning_rate=0.001,epsilon=1e-8,max_grad_norm=40.0,evaluation_interval=10,hops=3,epochs=200,embedding_size=20):
+    def __init__(self,data_dir,model_dir,task_id,isInteractive=True,OOV=False,memory_size=250,random_state=None,batch_size=32,learning_rate=0.001,epsilon=1e-8,max_grad_norm=40.0,evaluation_interval=10,hops=3,epochs=200,embedding_size=20):
         self.data_dir=data_dir
         self.task_id=task_id
         self.model_dir=model_dir
@@ -190,7 +190,6 @@ class chatBot(object):
             test_preds=self.batch_predict(testS,testQ,n_test)
             test_acc = metrics.accuracy_score(test_preds, testA)
             print("Testing Accuracy:", test_acc)
-
             # print(test_preds, testA)
 
     def batch_predict(self,S,Q,n):
@@ -210,7 +209,7 @@ if __name__ =='__main__':
     model_dir="task"+str(FLAGS.task_id)+"_"+FLAGS.model_dir
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size)
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
     # chatbot.run()
     if FLAGS.train:
         chatbot.train()

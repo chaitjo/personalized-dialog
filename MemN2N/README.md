@@ -54,6 +54,8 @@ The following params were used:
 * epsilon: 1e-8
 * embedding_size: 20
 
+#### Full set
+
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
 1	  |  99.75				|  99.69				|  99.83  			 |  75.57
@@ -61,6 +63,16 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 3     |  87.52				|  57.17				|  58.94			 |  ---
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  94.38				|  81.11				|  82.60			 |  ---
+
+#### 1000 dialogs set
+
+Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
+------|---------------------|-----------------------|--------------------|-----------------------
+1	  |  99.43				|  97.75				|  98.87  			 |  71.24
+2	  |  100				|  99.91				|  99.93			 |  78.85
+3     |  96.54				|  57.97				|  58.71			 |  ---
+4	  |  100				|  56.67				|  57.17			 |  ---
+5	  |  99.58				|  77.59				|  77.74			 |  ---
 
 ### Notes
 

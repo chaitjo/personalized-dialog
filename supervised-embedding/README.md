@@ -1,34 +1,28 @@
 # Description
 
-It is the implementation of Supervised embedding models from
-[[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683v3)] paper.
+Implementation of Supervised Embedding model from
+[[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683)]. Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/sld/supervised-embedding-model) code.
 
-Results almost the same as in the paper.
+### Usage
 
-Here you can find Russian paper-note of the paper: [link](https://github.com/sld/deeplearning-papernotes/blob/master/notes/end-to-end-goal.md).
+Training the model on all the tasks
 
-# Environment
+```
+bin/train_all.sh
+```
 
-* Python 3.6.0
-* tensorflow 1.0.0
-* Dialog bAbI Tasks Data 1-6 corpus, download by the [link](https://research.fb.com/downloads/babi/).
-This corpus should be placed in data/dialog-bAbI-tasks directory.
+Testing the model on all the tasks
 
+```
+bin/test_all.sh
+```
 
-All packages are listed in requirements.txt.
+### Requirements
 
-# Reproduce results
+* tensorflow
+* tqdm
 
-0. Setup the environment.
-1. Run: `bin/train_all.sh`
-2. After approx. 1 hour run it in test set: `bin/test_all.sh`
-
-
-# Results
-
-16.03.17.
-
-In the table per-response accuracy is shown.
+### Results - bAbI Tasks
 
 <table>
   <tr>
@@ -110,8 +104,8 @@ In the table per-response accuracy is shown.
   </tr>
 </table>
 
-Open question:
+### Original Notes
 
-1. When we training with use_history=True should we test on pre-processed
+When we training with use_history=True should we test on pre-processed
 dataset as in train? Or should we concat each output in test and build history
 on the fly?
