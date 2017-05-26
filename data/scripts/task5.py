@@ -155,4 +155,153 @@ if __name__ == '__main__':
     new_dialogs = modify_info(new_dialogs, kb, utterences)
     save_babi(new_dialogs, '../modified-tasks/1000/modified-task5-full-dialogs-tst-OOV.txt')
 
+    # Split dialog sets
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='0')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_young/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='0')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_young/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='0')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_young/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='0')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_young/modified-task5-full-dialogs-tst-OOV.txt')
+
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='1')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_young/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='1')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_young/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='1')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_young/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='1')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_young/modified-task5-full-dialogs-tst-OOV.txt')
+
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='2')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_middle-aged/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='2')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_middle-aged/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='2')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_middle-aged/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='2')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_middle-aged/modified-task5-full-dialogs-tst-OOV.txt')
+
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='3')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_middle-aged/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='3')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_middle-aged/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='3')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_middle-aged/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='3')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_middle-aged/modified-task5-full-dialogs-tst-OOV.txt')
+
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='4')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_elderly/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='4')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_elderly/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='4')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_elderly/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='4')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/male_elderly/modified-task5-full-dialogs-tst-OOV.txt')
+
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='5')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_elderly/modified-task5-full-dialogs-dev.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='5')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_elderly/modified-task5-full-dialogs-trn.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='5')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_elderly/modified-task5-full-dialogs-tst.txt')
+
+    dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
+    new_dialogs = modify_options(dialogs, kb, save='random')
+    new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='5')
+    new_dialogs = modify_info(new_dialogs, kb, utterences)
+    save_babi(new_dialogs, '../modified-tasks/split/female_elderly/modified-task5-full-dialogs-tst-OOV.txt')
 

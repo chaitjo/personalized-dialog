@@ -34,6 +34,8 @@ def modify_speech_style(dialogs, utterences, setting='babi', save='all'):
                     temp_dialog_set[i].append(turn)
         if save=='random':
             new_dialogs.append(temp_dialog_set[np.random.choice(len(temp_dialog_set))])
+        elif save.isdigit():
+            new_dialogs.append(temp_dialog_set[int(save)])
         else:
             for temp_dialog in temp_dialog_set:
                 new_dialogs.append(temp_dialog)
