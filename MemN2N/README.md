@@ -74,6 +74,18 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  99.58				|  77.59				|  77.74			 |  ---
 
+#### Split set
+Profile 			|  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy  |  Testing Accuracy(OOV)
+	    			|---------------------|-----------------------|--------------------|-----------------------
+	    			|	  Split model	  |	 	Split model	 	  |	 Split  |   Full   |	Split  	|	 Full	
+--------------------|---------------------|-----------------------|---------|----------|------------|----------
+male, young			|					  |						  |			|	77.70  |			|		
+female, young		|					  |						  |			|	77.14  |			|		
+male, middle-aged	|					  |						  |			|	77.59  |			|		
+female, middle-aged	|					  |						  |			|	77.80  |			|		
+male, elderly		|					  |						  |			|	77.82  |			|		
+female, elderly		|					  |						  |			|	77.52  |			|		
+
 ### Notes
 
 I didn't play around with the epsilon param in Adam until after my initial results but values of 1.0 and 0.1 seem to help convergence and overfitting.
