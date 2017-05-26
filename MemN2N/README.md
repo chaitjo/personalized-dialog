@@ -74,12 +74,10 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  99.58				|  77.59				|  77.74			 |  ---
 
-#### Split set
+#### Split set (Task 5)
 
-		 			|  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy  |  Testing Accuracy
---------------------|---------------------|-----------------------|--------------------|-----------------------
-Profile				|	  Split model	  |	 	Split model	 	  |	 	Split model	   |	1000s model
---------------------|---------------------|-----------------------|--------------------|-----------------------
+Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (1000s model)
+--------------------|---------------------|-----------------------|--------------------|--------------------------------
 male, young			|					  |						  |				  	   |		77.70	
 female, young		|					  |						  |			  		   |		77.14
 male, middle-aged	|					  |						  |			  		   |		77.59		
