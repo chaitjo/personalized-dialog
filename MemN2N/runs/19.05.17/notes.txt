@@ -1,0 +1,2 @@
+MT4 full set training
+OOV tests had problems

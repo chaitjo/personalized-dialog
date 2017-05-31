@@ -1,0 +1,3 @@
+T5 split-by-profiles data testing
+Using T5 1000 dialogs set model and vocab
+Must copy large (full/1000s) candidate file to each of the split/ folders

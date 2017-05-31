@@ -1,0 +1,2 @@
+MT1-5 1000 dialogs set training
+OOV tests had problems

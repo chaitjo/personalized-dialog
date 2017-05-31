@@ -10,6 +10,7 @@ import sys
 import tensorflow as tf
 import numpy as np
 import os
+import pickle
 
 tf.flags.DEFINE_float("learning_rate", 0.001, "Learning rate for Adam Optimizer.")
 tf.flags.DEFINE_float("epsilon", 1e-8, "Epsilon value for Adam Optimizer.")
@@ -27,12 +28,14 @@ tf.flags.DEFINE_string("model_dir", "model/", "Directory containing memn2n model
 tf.flags.DEFINE_boolean('train', True, 'if True, begin to train')
 tf.flags.DEFINE_boolean('interactive', False, 'if True, interactive')
 tf.flags.DEFINE_boolean('OOV', False, 'if True, use OOV test set')
+tf.flags.DEFINE_boolean('save_vocab', False, 'if True, saves vocabulary')
+tf.flags.DEFINE_boolean('load_vocab', False, 'if True, loads vocabulary instead of building it')
 FLAGS = tf.flags.FLAGS
 print("Started Task:", FLAGS.task_id)
 
 
 class chatBot(object):
-    def __init__(self,data_dir,model_dir,task_id,isInteractive=True,OOV=False,memory_size=250,random_state=None,batch_size=32,learning_rate=0.001,epsilon=1e-8,max_grad_norm=40.0,evaluation_interval=10,hops=3,epochs=200,embedding_size=20):
+    def __init__(self,data_dir,model_dir,task_id,isInteractive=True,OOV=False,memory_size=250,random_state=None,batch_size=32,learning_rate=0.001,epsilon=1e-8,max_grad_norm=40.0,evaluation_interval=10,hops=3,epochs=200,embedding_size=20,save_vocab=False,load_vocab=False):
         self.data_dir=data_dir
         self.task_id=task_id
         self.model_dir=model_dir
@@ -49,6 +52,8 @@ class chatBot(object):
         self.hops=hops
         self.epochs=epochs
         self.embedding_size=embedding_size
+        self.save_vocab=save_vocab
+        self.load_vocab=load_vocab
 
         candidates,self.candid2indx = load_candidates(self.data_dir, self.task_id)
         self.n_cand = len(candidates)
@@ -57,7 +62,7 @@ class chatBot(object):
         # task data
         self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
         data = self.trainData + self.testData + self.valData
-        self.build_vocab(data,candidates)
+        self.build_vocab(data,candidates,self.save_vocab,self.load_vocab)
         # self.candidates_vec=vectorize_candidates_sparse(candidates,self.word_idx)
         self.candidates_vec=vectorize_candidates(candidates,self.word_idx,self.candidate_sentence_size)
         optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate, epsilon=self.epsilon)
@@ -71,10 +76,15 @@ class chatBot(object):
         
 
 
-    def build_vocab(self,data,candidates):
-        vocab = reduce(lambda x, y: x | y, (set(list(chain.from_iterable(s)) + q) for s, q, a in data))
-        vocab |= reduce(lambda x,y: x|y, (set(candidate) for candidate in candidates) )
-        vocab=sorted(vocab)
+    def build_vocab(self,data,candidates,save=False,load=False):
+        if load:
+            vocab_file = open('vocab.obj', 'rb')
+            vocab = pickle.load(vocab_file)
+        else:
+            vocab = reduce(lambda x, y: x | y, (set(list(chain.from_iterable(s)) + q) for s, q, a in data))
+            vocab |= reduce(lambda x,y: x|y, (set(candidate) for candidate in candidates) )
+            vocab=sorted(vocab)
+        
         self.word_idx = dict((c, i + 1) for i, c in enumerate(vocab))
         max_story_size = max(map(len, (s for s, _, _ in data)))
         mean_story_size = int(np.mean([ len(s) for s, _, _ in data ]))
@@ -90,6 +100,10 @@ class chatBot(object):
         print("Longest candidate sentence length", self.candidate_sentence_size)
         print("Longest story length", max_story_size)
         print("Average story length", mean_story_size)
+
+        if save:
+            vocab_file = open('vocab.obj', 'wb')
+            pickle.dump(vocab, vocab_file)    
         
 
 
@@ -209,7 +223,7 @@ if __name__ =='__main__':
     model_dir="task"+str(FLAGS.task_id)+"_"+FLAGS.model_dir
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size,save_vocab=FLAGS.save_vocab,load_vocab=FLAGS.load_vocab)
     # chatbot.run()
     if FLAGS.train:
         chatbot.train()
