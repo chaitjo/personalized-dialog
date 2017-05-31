@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 source bin/utils.sh
@@ -8,7 +9,7 @@ WITH_PREPROCESS="$1"
 [ -z "$WITH_PREPROCESS" ] && WITH_PREPROCESS='False'
 
 if [ "$WITH_PREPROCESS" == "True" ]; then
-	python parse_candidates.py ../data/modified-tasks/modified-candidates.txt > data/candidates.tsv
+	python parse_candidates.py ../data/modified-tasks/full/modified-candidates.txt > data/candidates.tsv
   parse_dialogs 'modified-task1-API-calls' $task '--with_history --ignore_options'
 fi
 

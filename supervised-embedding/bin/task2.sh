@@ -9,7 +9,7 @@ WITH_PREPROCESS="$1"
 
 
 if [ "$WITH_PREPROCESS" == "True" ]; then
-	python parse_candidates.py ../data/modified-tasks/modified-candidates.txt > data/candidates.tsv
+	python parse_candidates.py ../data/modified-tasks/full/modified-candidates.txt > data/candidates.tsv
   parse_dialogs 'modified-task2-API-refine' $task '--ignore_options'
 fi
 

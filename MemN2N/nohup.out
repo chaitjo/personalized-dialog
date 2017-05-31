@@ -1,0 +1,502 @@
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12612
+vocab size: 14743
+Longest sentence length 19
+Longest candidate sentence length 7
+Longest story length 213
+Average story length 63
+Training Size 20392
+Validation Size 20467
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+-----------------------
+Epoch 10
+Total Cost: 18576.925786
+Training Accuracy: 0.752942330326
+Validation Accuracy: 0.701910392339
+-----------------------
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+-----------------------
+Epoch 20
+Total Cost: 9010.52398727
+Training Accuracy: 0.872302863868
+Validation Accuracy: 0.765085259198
+-----------------------
+Epoch 21
+Epoch 22
+Epoch 23
+Epoch 24
+Epoch 25
+Epoch 26
+Epoch 27
+Epoch 28
+Epoch 29
+Epoch 30
+-----------------------
+Epoch 30
+Total Cost: 5381.03953037
+Training Accuracy: 0.918350333464
+Validation Accuracy: 0.788146772854
+-----------------------
+Epoch 31
+Epoch 32
+Epoch 33
+Epoch 34
+Epoch 35
+Epoch 36
+Epoch 37
+Epoch 38
+Epoch 39
+Epoch 40
+-----------------------
+Epoch 40
+Total Cost: 3768.43634786
+Training Accuracy: 0.949195763044
+Validation Accuracy: 0.796648263058
+-----------------------
+Epoch 41
+Epoch 42
+Epoch 43
+Epoch 44
+Epoch 45
+Epoch 46
+Epoch 47
+Epoch 48
+Epoch 49
+Epoch 50
+-----------------------
+Epoch 50
+Total Cost: 2955.29789775
+Training Accuracy: 0.961651628089
+Validation Accuracy: 0.796550544779
+-----------------------
+Epoch 51
+Epoch 52
+Epoch 53
+Epoch 54
+Epoch 55
+Epoch 56
+Epoch 57
+Epoch 58
+Epoch 59
+Epoch 60
+-----------------------
+Epoch 60
+Total Cost: 2119.05535555
+Training Accuracy: 0.972636327972
+Validation Accuracy: 0.795622221136
+-----------------------
+Epoch 61
+Epoch 62
+Epoch 63
+Epoch 64
+Epoch 65
+Epoch 66
+Epoch 67
+Epoch 68
+Epoch 69
+Epoch 70
+-----------------------
+Epoch 70
+Total Cost: 1662.73979221
+Training Accuracy: 0.982395056885
+Validation Accuracy: 0.801192162994
+-----------------------
+Epoch 71
+Epoch 72
+Epoch 73
+Epoch 74
+Epoch 75
+Epoch 76
+Epoch 77
+Epoch 78
+Epoch 79
+Epoch 80
+-----------------------
+Epoch 80
+Total Cost: 1429.03568413
+Training Accuracy: 0.985925853276
+Validation Accuracy: 0.800605853325
+-----------------------
+Epoch 81
+Epoch 82
+Epoch 83
+Epoch 84
+Epoch 85
+Epoch 86
+Epoch 87
+Epoch 88
+Epoch 89
+Epoch 90
+-----------------------
+Epoch 90
+Total Cost: 1189.07596545
+Training Accuracy: 0.988721067085
+Validation Accuracy: 0.799384374847
+-----------------------
+Epoch 91
+Epoch 92
+Epoch 93
+Epoch 94
+Epoch 95
+Epoch 96
+Epoch 97
+Epoch 98
+Epoch 99
+Epoch 100
+-----------------------
+Epoch 100
+Total Cost: 995.410799719
+Training Accuracy: 0.986661435857
+Validation Accuracy: 0.797234572727
+-----------------------
+Epoch 101
+Epoch 102
+Epoch 103
+Epoch 104
+Epoch 105
+Epoch 106
+Epoch 107
+Epoch 108
+Epoch 109
+Epoch 110
+-----------------------
+Epoch 110
+Total Cost: 803.823222398
+Training Accuracy: 0.992251863476
+Validation Accuracy: 0.798602628622
+-----------------------
+Epoch 111
+Epoch 112
+Epoch 113
+Epoch 114
+Epoch 115
+Epoch 116
+Epoch 117
+Epoch 118
+Epoch 119
+Epoch 120
+-----------------------
+Epoch 120
+Total Cost: 841.211703012
+Training Accuracy: 0.993821106316
+Validation Accuracy: 0.797869741535
+-----------------------
+Epoch 121
+Epoch 122
+Epoch 123
+Epoch 124
+Epoch 125
+Epoch 126
+Epoch 127
+Epoch 128
+Epoch 129
+Epoch 130
+-----------------------
+Epoch 130
+Total Cost: 518.492613713
+Training Accuracy: 0.993085523735
+Validation Accuracy: 0.797576586701
+-----------------------
+Epoch 131
+Epoch 132
+Epoch 133
+Epoch 134
+Epoch 135
+Epoch 136
+Epoch 137
+Epoch 138
+Epoch 139
+Epoch 140
+-----------------------
+Epoch 140
+Total Cost: 601.724560867
+Training Accuracy: 0.996076892899
+Validation Accuracy: 0.798553769483
+-----------------------
+Epoch 141
+Epoch 142
+Epoch 143
+Epoch 144
+Epoch 145
+Epoch 146
+Epoch 147
+Epoch 148
+Epoch 149
+Epoch 150
+-----------------------
+Epoch 150
+Total Cost: 492.049189778
+Training Accuracy: 0.996665358964
+Validation Accuracy: 0.79816289637
+-----------------------
+Epoch 151
+Epoch 152
+Epoch 153
+Epoch 154
+Epoch 155
+Epoch 156
+Epoch 157
+Epoch 158
+Epoch 159
+Epoch 160
+-----------------------
+Epoch 160
+Total Cost: 866.370457687
+Training Accuracy: 0.995292271479
+Validation Accuracy: 0.796990277031
+-----------------------
+Epoch 161
+Epoch 162
+Epoch 163
+Epoch 164
+Epoch 165
+Epoch 166
+Epoch 167
+Epoch 168
+Epoch 169
+Epoch 170
+-----------------------
+Epoch 170
+Total Cost: 575.40034329
+Training Accuracy: 0.997253825029
+Validation Accuracy: 0.798211755509
+-----------------------
+Epoch 171
+Epoch 172
+Epoch 173
+Epoch 174
+Epoch 175
+Epoch 176
+Epoch 177
+Epoch 178
+Epoch 179
+Epoch 180
+-----------------------
+Epoch 180
+Total Cost: 411.274249741
+Training Accuracy: 0.997253825029
+Validation Accuracy: 0.797430009283
+-----------------------
+Epoch 181
+Epoch 182
+Epoch 183
+Epoch 184
+Epoch 185
+Epoch 186
+Epoch 187
+Epoch 188
+Epoch 189
+Epoch 190
+-----------------------
+Epoch 190
+Total Cost: 316.032644366
+Training Accuracy: 0.996959591997
+Validation Accuracy: 0.798211755509
+-----------------------
+Epoch 191
+Epoch 192
+Epoch 193
+Epoch 194
+Epoch 195
+Epoch 196
+Epoch 197
+Epoch 198
+Epoch 199
+Epoch 200
+-----------------------
+Epoch 200
+Total Cost: 589.619882602
+Training Accuracy: 0.996665358964
+Validation Accuracy: 0.797136854449
+-----------------------
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2408
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'what food are you looking for'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12012
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call french london six expensive'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2407
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'where should it be located'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12012
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call spanish rome eight cheap'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2412
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call spanish london eight cheap'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12612
+vocab size: 14743
+Longest sentence length 19
+Longest candidate sentence length 7
+Longest story length 213
+Average story length 63
+Testing Size 20316
+Testing Accuracy: 0.805768852136
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2408
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'what food are you looking for'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12012
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call french london six expensive'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2407
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'where should it be located'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 12012
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call spanish rome eight cheap'
+/root/joshi/tensorflow/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 5
+Candidate Size 2412
+Traceback (most recent call last):
+  File "single_dialog.py", line 212, in <module>
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size)
+  File "single_dialog.py", line 58, in __init__
+    self.trainData, self.testData, self.valData = load_dialog_task(self.data_dir, self.task_id, self.candid2indx, self.OOV)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 42, in load_dialog_task
+    train_data = get_dialogs(train_file,candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 148, in get_dialogs
+    return parse_dialogs_per_response(f.readlines(),candid_dic)
+  File "/root/joshi/personalized-ncm/MemN2N/data_utils.py", line 119, in parse_dialogs_per_response
+    a = candid_dic[r]
+KeyError: 'api_call spanish london eight cheap'

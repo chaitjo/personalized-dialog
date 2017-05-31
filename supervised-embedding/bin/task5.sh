@@ -8,7 +8,7 @@ WITH_PREPROCESS="$1"
 [ -z "$WITH_PREPROCESS" ] && WITH_PREPROCESS='False'
 
 if [ "$WITH_PREPROCESS" == "True" ]; then
-  python parse_candidates.py ../data/modified-tasks/modified-candidates.txt > data/candidates.tsv
+  python parse_candidates.py ../data/modified-tasks/full/modified-candidates.txt > data/candidates.tsv
   parse_dialogs 'modified-task5-full-dialogs' $task "--ignore_options --with_history"
 fi
 
