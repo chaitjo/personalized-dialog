@@ -78,7 +78,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 
 Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (1000s model)
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
-male, young			|					  |						  |				  	   |		77.70	
+male, young			|		99.66		  |			79.71		  |		80.57	  	   |		77.70	
 female, young		|					  |						  |			  		   |		77.14
 male, middle-aged	|					  |						  |			  		   |		77.59		
 female, middle-aged	|					  |						  |				  	   |		77.80	

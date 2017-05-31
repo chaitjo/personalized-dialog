@@ -1,0 +1,2 @@
+split dataset by profile (1000 each) training and testing
+failed for all except (young, male)
