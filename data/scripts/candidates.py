@@ -14,8 +14,9 @@ def modify_candidates(candidates, utterences, save='all'):
     for candidate in candidates:
         candidate = candidate.split('1 ')[1][:-1]
         pattern, data = process_utterence(candidate)
+        responses = utterences[pattern]
         for modified_response in set(utterences[pattern]):
-            if save.isdigit() and utterences[pattern].index(modified_response)!=int(save):
+            if save.isdigit() and responses[int(save)]!=modified_response:
                 continue
             else:
                 if pattern=='api_call':
