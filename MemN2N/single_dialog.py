@@ -204,7 +204,10 @@ class chatBot(object):
             test_preds=self.batch_predict(testS,testQ,n_test)
             test_acc = metrics.accuracy_score(test_preds, testA)
             print("Testing Accuracy:", test_acc)
-            # print(test_preds, testA)
+            
+            # print(testA)
+            # for pred in test_preds:
+            #     print(pred, self.indx2candid[pred])
 
     def batch_predict(self,S,Q,n):
         preds=[]

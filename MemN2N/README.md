@@ -78,12 +78,12 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 
 Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (1000s model)
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
-male, young			|		99.66		  |			79.71		  |		80.57	  	   |		77.70	
-female, young		|					  |						  |			  		   |		77.14
-male, middle-aged	|					  |						  |			  		   |		77.59		
-female, middle-aged	|					  |						  |				  	   |		77.80	
-male, elderly		|					  |						  |				  	   |		77.82	
-female, elderly		|					  |						  |				  	   |		77.52	
+male, young			|		99.66		  |			79.66		  |		80.38	  	   |		77.70	
+female, young		|		99.51		  |			79.96		  |		80.15		   |		77.14
+male, middle-aged	|		99.68		  |			80.07		  |		80.29		   |		77.59		
+female, middle-aged	|		99.60		  |			79.88		  |		80.21	  	   |		77.80	
+male, elderly		|		99.61		  |			80.04		  |		80.57	  	   |		77.82	
+female, elderly		|		99.40		  |			79.57		  |		80.41	  	   |		77.52	
 
 ### Notes
 
