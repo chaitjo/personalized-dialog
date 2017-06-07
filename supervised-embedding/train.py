@@ -113,7 +113,7 @@ if __name__ == '__main__':
     train_tensor = make_tensor(args.train, vocab)
     dev_tensor = make_tensor(args.dev, vocab)
     candidates_tensor = make_tensor(args.candidates, vocab)
-    config = {'batch_size': 32, 'epochs': 400,
+    config = {'batch_size': 32, 'epochs': 15,
               'negative_cand': args.negative_cand, 'save_dir': args.save_dir,
               'lr': args.learning_rate}
     model = Model(len(vocab), emb_dim=args.emb_dim, margin=args.margin)
