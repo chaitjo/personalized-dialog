@@ -3,7 +3,7 @@
 Implementation of Supervised Embedding model from
 [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683). Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/sld/supervised-embedding-model) code.
 
-### Usage
+## Usage
 
 Training the model on all the tasks
 
@@ -17,12 +17,14 @@ Testing the model on all the tasks
 bin/test_all.sh
 ```
 
-### Requirements
+## Requirements
 
 * tensorflow
 * tqdm
 
-### Results - bAbI Tasks
+## Results
+
+### Original bAbI dialog Tasks
 
 <table>
   <tr>
@@ -104,8 +106,12 @@ bin/test_all.sh
   </tr>
 </table>
 
-### Original Notes
+### Modified dialog tasks (full set)
 
-When we training with use_history=True should we test on pre-processed
-dataset as in train? Or should we concat each output in test and build history
-on the fly?
+Task  |  Testing Accuracy  
+------|---------------------
+  1   |       84.37
+  2   |       12.07
+  3   |       9.21
+  4   |       4.76
+  5   |       51.60

@@ -94,3 +94,11 @@ I c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
 
 Testing Accuracy: 0.5
 [5580, 33331, 8352, 16067] [array(29762), array(17228), array(8352), array(16067)]
+
+---
+
+[array(29762), array(17228), array(8352), array(16067)]
+5580 here you go resto_london_expensive_french_2stars_2_address resto_london_expensive_french_2stars_2_parking
+33331 here you go resto_rome_cheap_indian_7stars_2_social_media
+8352 cool its done
+16067 hey dude what is up

@@ -84,8 +84,8 @@ def load_utterences():
             "here you go",
             "here it is",
             "here it is",
-            "here is the infomation you asked for",
-            "here is the infomation you asked for"),
+            "here is the information you asked for",
+            "here is the information you asked for"),
 
         "is there anything i can help you with" : ("want anything else",
             "need something else",

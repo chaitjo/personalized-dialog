@@ -108,23 +108,23 @@ if __name__ == '__main__':
     new_dialogs = modify_speech_style(new_dialogs, utterences, 'modified')
     save_babi(new_dialogs, '../modified-tasks/modified-task3-options-tst-OOV.txt')
 
-    # 1000 dialogs set
+    # small dialogs set
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-dev.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-dev.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task3-options-dev.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-trn.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-trn.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task3-options-trn.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-tst.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task3-options-tst.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task3-options-tst-OOV.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task3-options-tst-OOV.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task3-options-tst-OOV.txt')

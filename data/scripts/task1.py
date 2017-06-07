@@ -19,19 +19,19 @@ if __name__ == '__main__':
     new_dialogs = modify_speech_style(dialogs, utterences)
     save_babi(new_dialogs, '../modified-tasks/modified-task1-API-calls-tst-OOV.txt', True)
 
-    # 1000 dialogs set
+    # small dialogs set
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task1-API-calls-dev.txt')
     new_dialogs = modify_speech_style(dialogs, utterences, save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task1-API-calls-dev.txt', True)
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task1-API-calls-dev.txt', True)
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task1-API-calls-trn.txt')
     new_dialogs = modify_speech_style(dialogs, utterences, save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task1-API-calls-trn.txt', True)
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task1-API-calls-trn.txt', True)
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task1-API-calls-tst.txt')
     new_dialogs = modify_speech_style(dialogs, utterences, save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task1-API-calls-tst.txt', True)
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task1-API-calls-tst.txt', True)
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task1-API-calls-tst-OOV.txt')
     new_dialogs = modify_speech_style(dialogs, utterences, save='random')
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task1-API-calls-tst-OOV.txt', True)
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task1-API-calls-tst-OOV.txt', True)

@@ -256,3 +256,23 @@ I c:\tf_jenkins\home\workspace\release-win\device\cpu\os\windows\tensorflow\core
 Testing Accuracy: 0.5
 [10812, 6237, 39650, 6237, 39650, 15123, 39650, 15123, 39650, 15123, 39650, 15123, 6237, 15123, 7778, 14109] 
 [array(10812), array(34032), array(39650), array(38597), array(39650), array(9275), array(39650), array(32628), array(39650), array(10967), array(39650), array(14223), array(6237), array(22117), array(7778), array(10188)]
+
+---
+
+[array(10812), array(34032), array(39650), array(38597), array(39650), array(9275), array(39650), array(32628), array(39650), array(10967), array(39650), array(14223), array(6237), array(22117), array(7778), array(10188)]
+10812 awesome you are done
+6237 sure finding some options
+39650 sure finding something else
+6237 sure finding some options
+39650 sure finding something else
+15123 what food are you looking for
+39650 sure finding something else
+15123 what food are you looking for
+39650 sure finding something else
+15123 what food are you looking for
+39650 sure finding something else
+15123 what food are you looking for
+6237 sure finding some options
+15123 what food are you looking for
+7778 be right back with your reservation
+14109 hello sir what can i help you with

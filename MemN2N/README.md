@@ -4,7 +4,7 @@ Implementation of [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/a
 
 ![MemN2N picture](https://www.dropbox.com/s/3rdwfxt80v45uqm/Screenshot%202015-11-19%2000.57.27.png?dl=1)
 
-### Usage
+## Usage
 
 Train the model
 
@@ -12,28 +12,22 @@ Train the model
 python single_dialog.py --train True --task_id 1 --interactive False
 ```
 
-Running a [single bAbI/modified task](./single_dialog.py) Demo
+Running a single bAbI/modified task Demo
 
 ```
 python single_dialog.py --train False --task_id 1 --interactive True
 ```
 
-### Requirements
+## Requirements
 
 * tensorflow
 * scikit-learn
 * six
 * scipy
 
-### Results - bAbI Tasks
+## Results
 
-Unless specified, the Adam optimizer was used.
-
-The following params were used:
-* epochs: 200
-* learning_rate: 0.01
-* epsilon: 1e-8
-* embedding_size: 20
+### Original bAbI dialog tasks
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -44,17 +38,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 5     |  99.9               |  98.4		            |  98.5				 |	64.9
 6     |  73.1               |  49.3		            |  40.6				 |	---
 
-### Results - Modified Tasks
-
-Unless specified, the Adam optimizer was used.
-
-The following params were used:
-* epochs: 200
-* learning_rate: 0.01
-* epsilon: 1e-8
-* embedding_size: 20
-
-#### Full set
+### Modified dialog tasks (full set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -64,7 +48,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  94.38				|  81.11				|  82.60			 |  ---
 
-#### 1000 dialogs set
+### Modified dialog tasks (small set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -74,9 +58,9 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  99.58				|  77.59				|  77.74			 |  ---
 
-#### Split set (Task 5)
+### Multi-task learning experiments on MT5 
 
-Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (1000s model)
+Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (multi-profile model)
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
 male, young			|		99.66		  |			79.66		  |		80.38	  	   |		77.70	
 female, young		|		99.51		  |			79.96		  |		80.15		   |		77.14
@@ -84,7 +68,3 @@ male, middle-aged	|		99.68		  |			80.07		  |		80.29		   |		77.59
 female, middle-aged	|		99.60		  |			79.88		  |		80.21	  	   |		77.80	
 male, elderly		|		99.61		  |			80.04		  |		80.57	  	   |		77.82	
 female, elderly		|		99.40		  |			79.57		  |		80.41	  	   |		77.52	
-
-### Notes
-
-I didn't play around with the epsilon param in Adam until after my initial results but values of 1.0 and 0.1 seem to help convergence and overfitting.

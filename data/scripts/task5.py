@@ -130,30 +130,30 @@ if __name__ == '__main__':
     new_dialogs = modify_info(new_dialogs, kb, utterences)
     save_babi(new_dialogs, '../modified-tasks/modified-task5-full-dialogs-tst-OOV.txt')
 
-    # 1000 dialogs set
+    # small dialogs set
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task5-full-dialogs-dev.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task5-full-dialogs-dev.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-trn.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task5-full-dialogs-trn.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task5-full-dialogs-trn.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task5-full-dialogs-tst.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task5-full-dialogs-tst.txt')
 
     dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-tst-OOV.txt')
     new_dialogs = modify_options(dialogs, kb, save='random')
     new_dialogs = modify_speech_style(new_dialogs, utterences, setting='modified', save='random')
     new_dialogs = modify_info(new_dialogs, kb, utterences)
-    save_babi(new_dialogs, '../modified-tasks/1000/modified-task5-full-dialogs-tst-OOV.txt')
+    save_babi(new_dialogs, '../modified-tasks/small/modified-task5-full-dialogs-tst-OOV.txt')
 
     # Split dialog sets
     dialogs = dialogs = read_babi('../dialog-bAbI-tasks/dialog-babi-task5-full-dialogs-dev.txt')
