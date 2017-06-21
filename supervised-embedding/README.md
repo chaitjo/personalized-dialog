@@ -4,7 +4,7 @@ Implementation of the Supervised Embeddings model from
 
 The `log/` directory contains training logs and the `checkpoints/` directory contains the best performing model for each task.
 
-Adapted from [sld's implementation](https://github.com/sld/supervised-embedding-model) code.
+Adapted from [sld's implementation](https://github.com/sld/supervised-embedding-model).
 
 ## Usage
 
