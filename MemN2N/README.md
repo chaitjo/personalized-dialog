@@ -1,21 +1,18 @@
-# MemN2N Chatbot in Tensorflow
+# End-to-end Memory Network for Dialog
+Implementation of Memory Networks from [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
 
-Implementation of [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) with sklearn-like interface using Tensorflow. Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/vyraun/chatbot-MemN2N-tensorflow) code.
-
-![MemN2N picture](https://www.dropbox.com/s/3rdwfxt80v45uqm/Screenshot%202015-11-19%2000.57.27.png?dl=1)
+Adapted from [vyraun's implementation](https://github.com/vyraun/chatbot-MemN2N-tensorflow).
 
 ## Usage
 
 Train the model
-
 ```
-python single_dialog.py --train True --task_id 1 --interactive False
+python single_dialog.py --train True --task_id 1
 ```
 
-Running a single bAbI/modified task Demo
-
+Test the trained model
 ```
-python single_dialog.py --train False --task_id 1 --interactive True
+python single_dialog.py --train False --task_id 1
 ```
 
 ## Requirements
@@ -27,7 +24,7 @@ python single_dialog.py --train False --task_id 1 --interactive True
 
 ## Results
 
-### Original bAbI dialog tasks
+### bAbI dialog tasks
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -38,7 +35,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 5     |  99.9               |  98.4		            |  98.5				 |	64.9
 6     |  73.1               |  49.3		            |  40.6				 |	---
 
-### Modified dialog tasks (full set)
+### Personalized Dialog tasks (full set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -48,7 +45,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  94.38				|  81.11				|  82.60			 |  ---
 
-### Modified dialog tasks (small set)
+### Personalized Dialog tasks (small set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -58,7 +55,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  99.58				|  77.59				|  77.74			 |  ---
 
-### Multi-task learning experiments on MT5 
+### Multi-task learning experiments on PT5
 
 Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (multi-profile model)
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
