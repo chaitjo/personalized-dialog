@@ -1,4 +1,4 @@
-# End-to-end Memory Network for Dialog
+# End-to-end Memory Networks for Dialog
 Implementation of Memory Networks from [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
 
 Adapted from [vyraun's implementation](https://github.com/vyraun/chatbot-MemN2N-tensorflow).
