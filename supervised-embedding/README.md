@@ -1,18 +1,17 @@
-# Description
-
+# Supervised Embeddings
 Implementation of Supervised Embedding model from
-[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683). Tested on the [bAbl](https://research.facebook.com/research/babi/) dataset and our modified dataset. Built on top of [this](https://github.com/sld/supervised-embedding-model) code.
+[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
+
+Adapted from [sld's implementation](https://github.com/sld/supervised-embedding-model) code.
 
 ## Usage
 
 Training the model on all the tasks
-
 ```
 bin/train_all.sh
 ```
 
 Testing the model on all the tasks
-
 ```
 bin/test_all.sh
 ```
@@ -24,7 +23,7 @@ bin/test_all.sh
 
 ## Results
 
-### Original bAbI dialog Tasks
+### bAbI dialog Tasks
 
 <table>
   <tr>
@@ -106,7 +105,7 @@ bin/test_all.sh
   </tr>
 </table>
 
-### Modified dialog tasks (full set)
+### Personalized Dialog tasks (full set)
 
 Task  |  Testing Accuracy  
 ------|---------------------
