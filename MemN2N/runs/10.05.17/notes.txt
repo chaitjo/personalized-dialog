@@ -1,3 +1,0 @@
-MT1-MT5 full set training
-MT4 had problems
-OOV tests had problems

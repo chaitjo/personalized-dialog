@@ -2,7 +2,7 @@
 Implementation of the Supervised Embeddings model from
 [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
 
-The `log/` directory contains training logs and the `checkpoints/` directory contains the best performing model for each task.
+Experimental logs and best performing models for each task can be downloaded using the `build_experiments.py` script.
 
 Adapted from [sld's implementation](https://github.com/sld/supervised-embedding-model).
 
