@@ -1,6 +1,6 @@
 # Supervised Embeddings
 Implementation of the Supervised Embeddings model from
-[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI dialog dataset and the Personalized dialog dataset. 
+[Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
 
 The `log/` directory contains training logs and the `checkpoints/` directory contains the best performing model for each task.
 
@@ -25,7 +25,7 @@ bin/test_all.sh
 
 ## Results
 
-### bAbI dialog Tasks
+### bAbI Dialog Tasks
 
 <table>
   <tr>
@@ -85,7 +85,7 @@ bin/test_all.sh
   </tr>
   <tr>
     <td>
-      T5: Full dialogs
+      T5: Full Dialogs
     </td>
     <td>
       75.4
@@ -107,7 +107,7 @@ bin/test_all.sh
   </tr>
 </table>
 
-### Personalized dialog tasks (full set)
+### Personalized Dialog tasks (full set)
 
 Task  |  Testing Accuracy  
 ------|---------------------
