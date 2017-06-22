@@ -1,5 +1,5 @@
 # End-to-end Memory Networks for Dialog
-Implementation of Memory Networks from [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialog dataset. 
+Implementation of Memory Networks from [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI dialog dataset and the Personalized dialog dataset. 
 
 The `runs/` directory contains experimental results, trained models and logs from our paper.
 
@@ -37,7 +37,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 5     |  99.9               |  98.4		            |  98.5				 |	64.9
 6     |  73.1               |  49.3		            |  40.6				 |	---
 
-### Personalized Dialog tasks (full set)
+### Personalized dialog tasks (full set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
@@ -47,7 +47,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  94.38				|  81.11				|  82.60			 |  ---
 
-### Personalized Dialog tasks (small set)
+### Personalized dialog tasks (small set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
 ------|---------------------|-----------------------|--------------------|-----------------------
