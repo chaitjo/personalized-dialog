@@ -10,5 +10,5 @@ Each of the tasks can also be generated from the [bAbI Dialog tasks](https://res
 We provide our implementations of two models- Memory Networks (`MemN2N/`) and Supervised Embeddings (`supervised-embedding/`). Each directory contains scripts, experimental logs and model checkpoints. Instructions on using a models are given in its README.
 
 ## References
-* Antoine Bordes, Y-Lan Boureau, Jason Weston, "Learning End-to-End Goal-Oriented Dialog", [arXiv:1605.07683](https://arxiv.org/abs/1605.07683) [cs.CL].
-* Chaitanya K. Joshi, Fei Mi, Boi Faltings, "Personalization in Goal-Oriented Dialog", [arXiv:1706.07503](https://arxiv.org/abs/1706.07503) [cs.CL].
+* Antoine Bordes, Y-Lan Boureau, Jason Weston, "Learning End-to-End Goal-Oriented Dialog", [*arXiv:1605.07683*](https://arxiv.org/abs/1605.07683) [cs.CL].
+* Chaitanya K. Joshi, Fei Mi, Boi Faltings, "Personalization in Goal-Oriented Dialog", [*arXiv:1706.07503*](https://arxiv.org/abs/1706.07503) [cs.CL].
