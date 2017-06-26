@@ -10,7 +10,7 @@ WITH_PREPROCESS="$1"
 
 if [ "$WITH_PREPROCESS" == "True" ]; then
 	python parse_candidates.py ../data/personalized-dialog-dataset/personalized-dialog-candidates.txt > data/candidates.tsv
-  parse_dialogs 'small/personalized-dialog-task1-API-calls' $task '--with_history --ignore_options'
+  parse_dialogs 'personalized-dialog-task1-API-calls' $task '--with_history --ignore_options'
 fi
 
 python train.py --train data/train-$task.tsv --dev data/dev-$task-500.tsv \
