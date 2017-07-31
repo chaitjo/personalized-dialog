@@ -13,7 +13,7 @@ def load_candidates(data_dir, task_id):
     candidates=[]
     candidates_f=None
     candid_dic={}
-    candidates_f='modified-candidates.txt'
+    candidates_f='../personalized-dialog-candidates.txt'
     with open(os.path.join(data_dir,candidates_f)) as f:
         for i,line in enumerate(f):
             candid_dic[line.strip().split(' ',1)[1]] = i
@@ -32,7 +32,7 @@ def load_dialog_task(data_dir, task_id, candid_dic, isOOV):
 
     files = os.listdir(data_dir)
     files = [os.path.join(data_dir, f) for f in files]
-    s = 'modified-task{}-'.format(task_id)
+    s = 'personalized-dialog-task{}-'.format(task_id)
     train_file = [f for f in files if s in f and 'trn' in f][0]
     if isOOV:
         test_file = [f for f in files if s in f and 'tst-OOV' in f][0]
