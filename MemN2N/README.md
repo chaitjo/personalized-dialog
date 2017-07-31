@@ -19,7 +19,7 @@ python single_dialog.py --train False --task_id 1
 
 ## Requirements
 
-* tensorflow
+* tensorflow 0.12.1
 * scikit-learn
 * six
 * scipy

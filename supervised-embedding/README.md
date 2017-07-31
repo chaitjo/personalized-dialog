@@ -20,7 +20,7 @@ bin/test_all.sh
 
 ## Requirements
 
-* tensorflow
+* tensorflow 0.12.1
 * tqdm
 
 ## Results
