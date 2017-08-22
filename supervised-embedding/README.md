@@ -116,3 +116,13 @@ Task  |  Testing Accuracy
   3   |       9.21
   4   |       4.76
   5   |       51.60
+
+### Personalized Dialog tasks (full set)
+
+Task  |  Testing Accuracy  
+------|---------------------
+  1   |       84.26
+  2   |       13.14
+  3   |       9.02
+  4   |       6.03
+  5   |       47.05
