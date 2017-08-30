@@ -222,8 +222,8 @@ class MemN2NDialog(object):
                 # Calculate probabilities
                 probs = tf.nn.softmax(dotted)
                 probs_profile = tf.nn.softmax(dotted_profile)
-                # probs = tf.Print(probs, ['memory- ', count, tf.shape(probs), probs, '\n'], summarize=200)
-                # probs_profile = tf.Print(probs_profile, ['profile- ', count, tf.shape(probs_profile), probs_profile, '\n'], summarize=200)
+                # probs = tf.Print(probs, ['memory', count, tf.shape(probs), probs], summarize=200)
+                # probs_profile = tf.Print(probs_profile, ['profile', count, tf.shape(probs_profile), probs_profile], summarize=200)
 
                 probs_temp = tf.transpose(tf.expand_dims(probs, -1), [0, 2, 1])
                 probs_temp_profile = tf.transpose(tf.expand_dims(probs_profile, -1), [0, 2, 1])

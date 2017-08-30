@@ -20,7 +20,7 @@ tf.flags.DEFINE_integer("batch_size", 64, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
 tf.flags.DEFINE_integer("epochs", 200, "Number of epochs to train for.")
 tf.flags.DEFINE_integer("embedding_size", 20, "Embedding size for embedding matrices.")
-tf.flags.DEFINE_integer("memory_size", 200, "Maximum size of memory.")
+tf.flags.DEFINE_integer("memory_size", 250, "Maximum size of memory.")
 tf.flags.DEFINE_integer("task_id", 1, "task id, 1 <= id <= 5")
 tf.flags.DEFINE_integer("random_state", None, "Random state.")
 tf.flags.DEFINE_string("data_dir", "../data/personalized-dialog-dataset/small", "Directory containing bAbI tasks")
@@ -208,8 +208,8 @@ class chatBot(object):
             print("Testing Accuracy:", test_acc)
             
             # print(testA)
-            # for pred in test_preds:
-            #     print(pred, self.indx2candid[pred])
+            for pred, ans in test_preds, testA:
+                print(ans, pred, self.indx2candid[pred])
 
     def batch_predict(self,P,S,Q,n):
         preds=[]
