@@ -16,9 +16,9 @@ tf.flags.DEFINE_float("learning_rate", 0.001, "Learning rate for Adam Optimizer.
 tf.flags.DEFINE_float("epsilon", 1e-8, "Epsilon value for Adam Optimizer.")
 tf.flags.DEFINE_float("max_grad_norm", 40.0, "Clip gradients to this norm.")
 tf.flags.DEFINE_integer("evaluation_interval", 10, "Evaluate and print results every x epochs")
-tf.flags.DEFINE_integer("batch_size", 64, "Batch size for training.")
+tf.flags.DEFINE_integer("batch_size", 32, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
-tf.flags.DEFINE_integer("epochs", 200, "Number of epochs to train for.")
+tf.flags.DEFINE_integer("epochs", 250, "Number of epochs to train for.")
 tf.flags.DEFINE_integer("embedding_size", 20, "Embedding size for embedding matrices.")
 tf.flags.DEFINE_integer("memory_size", 250, "Maximum size of memory.")
 tf.flags.DEFINE_integer("task_id", 1, "task id, 1 <= id <= 5")
@@ -78,7 +78,7 @@ class chatBot(object):
 
     def build_vocab(self,data,candidates,save=False,load=False):
         if load:
-            vocab_file = open('vocab.obj', 'rb')
+            vocab_file = open('vocab'+str(self.task_id)+'.obj', 'rb')
             vocab = pickle.load(vocab_file)
         else:
             vocab = reduce(lambda x, y: x | y, (set(list(chain.from_iterable(s)) + q) for p, s, q, a in data))
@@ -103,8 +103,8 @@ class chatBot(object):
         print("Average story length", mean_story_size)
 
         if save:
-            vocab_file = open('vocab.obj', 'wb')
-            pickle.dump(vocab, vocab_file)    
+            vocab_file = open('vocab'+str(self.task_id)+'.obj', 'wb')
+            pickle.dump(vocab, vocab_file)
         
 
 
@@ -208,8 +208,8 @@ class chatBot(object):
             print("Testing Accuracy:", test_acc)
             
             # print(testA)
-            for pred, ans in test_preds, testA:
-                print(ans, pred, self.indx2candid[pred])
+            #for pred, ans in test_preds, testA:
+            #    print(ans, pred, self.indx2candid[pred])
 
     def batch_predict(self,P,S,Q,n):
         preds=[]
@@ -229,7 +229,7 @@ if __name__ =='__main__':
     model_dir="task"+str(FLAGS.task_id)+"_"+FLAGS.model_dir
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size,save_vocab=FLAGS.save_vocab,load_vocab=FLAGS.load_vocab)
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size,epochs=FLAGS.epochs,hops=FLAGS.hops,save_vocab=FLAGS.save_vocab,load_vocab=FLAGS.load_vocab)
     # chatbot.run()
     if FLAGS.train:
         chatbot.train()
