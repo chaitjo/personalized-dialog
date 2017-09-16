@@ -206,8 +206,8 @@ class chatBot(object):
             print("Testing Accuracy:", test_acc)
             
             # print(testA)
-            # for pred, ans in test_preds, testA:
-            #    print(ans, pred, self.indx2candid[pred])
+            # for pred in test_preds:
+            #    print(pred, self.indx2candid[pred])
 
     def batch_predict(self,P,S,Q,n):
         preds=[]
@@ -227,7 +227,7 @@ if __name__ =='__main__':
     model_dir="task"+str(FLAGS.task_id)+"_"+FLAGS.model_dir
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size,epochs=FLAGS.epochs,hops=FLAGS.hops,save_vocab=FLAGS.save_vocab,load_vocab=FLAGS.load_vocab)
+    chatbot=chatBot(FLAGS.data_dir,model_dir,FLAGS.task_id,OOV=FLAGS.OOV,isInteractive=FLAGS.interactive,batch_size=FLAGS.batch_size,memory_size=FLAGS.memory_size,epochs=FLAGS.epochs,hops=FLAGS.hops,save_vocab=FLAGS.save_vocab,load_vocab=FLAGS.load_vocab,learning_rate=FLAGS.learning_rate,embedding_size=FLAGS.embedding_size)
     # chatbot.run()
     if FLAGS.train:
         chatbot.train()

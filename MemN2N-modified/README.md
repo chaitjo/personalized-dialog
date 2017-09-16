@@ -8,7 +8,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 2	  |  93.71				|  93.54				|  93.24			 |  76.04
 3     |  99.89				|  66.60				|  68.60			 |  64.38
 4	  |  100				|  56.67				|  57.17			 |  56.98
-5	  |  94.38				|  81.11				|  82.60			 |  ---
+5	  |  95.38				|  87.01				|  87.28			 |  63.96
 
 ### Personalized Dialog tasks (small set)
 
