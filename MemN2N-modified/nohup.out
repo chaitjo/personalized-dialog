@@ -1,0 +1,1688 @@
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 1
+Candidate Size 43863
+vocab size: 14590
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 14
+Average story length 5
+Training Size 36144
+Validation Size 36090
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+-----------------------
+Epoch 10
+Total Cost: 32724.6351652
+Training Accuracy: 0.80411686587
+Validation Accuracy: 0.782405098365
+-----------------------
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+-----------------------
+Epoch 20
+Total Cost: 24005.9861624
+Training Accuracy: 0.8447875166
+Validation Accuracy: 0.812801330008
+-----------------------
+Epoch 21
+Epoch 22
+Epoch 23
+Epoch 24
+Epoch 25
+Epoch 26
+Epoch 27
+Epoch 28
+Epoch 29
+Epoch 30
+-----------------------
+Epoch 30
+Total Cost: 20321.8716006
+Training Accuracy: 0.858040061974
+Validation Accuracy: 0.837545026323
+-----------------------
+Epoch 31
+Epoch 32
+Epoch 33
+Epoch 34
+Epoch 35
+Epoch 36
+Epoch 37
+Epoch 38
+Epoch 39
+Epoch 40
+-----------------------
+Epoch 40
+Total Cost: 19588.333902
+Training Accuracy: 0.858150730412
+Validation Accuracy: 0.835965641452
+-----------------------
+Epoch 41
+Epoch 42
+Epoch 43
+Epoch 44
+Epoch 45
+Epoch 46
+Epoch 47
+Epoch 48
+Epoch 49
+Epoch 50
+-----------------------
+Epoch 50
+Total Cost: 19198.4585705
+Training Accuracy: 0.855384019478
+Validation Accuracy: 0.832224993073
+-----------------------
+Epoch 51
+Epoch 52
+Epoch 53
+Epoch 54
+Epoch 55
+Epoch 56
+Epoch 57
+Epoch 58
+Epoch 59
+Epoch 60
+-----------------------
+Epoch 60
+Total Cost: 19007.6518531
+Training Accuracy: 0.865925188136
+Validation Accuracy: 0.8476586312
+-----------------------
+Epoch 61
+Epoch 62
+Epoch 63
+Epoch 64
+Epoch 65
+Epoch 66
+Epoch 67
+Epoch 68
+Epoch 69
+Epoch 70
+-----------------------
+Epoch 70
+Total Cost: 18913.6911205
+Training Accuracy: 0.863103142984
+Validation Accuracy: 0.841230257689
+-----------------------
+Epoch 71
+Epoch 72
+Epoch 73
+Epoch 74
+Epoch 75
+Epoch 76
+Epoch 77
+Epoch 78
+Epoch 79
+Epoch 80
+-----------------------
+Epoch 80
+Total Cost: 18932.8968491
+Training Accuracy: 0.866450863214
+Validation Accuracy: 0.850955943475
+-----------------------
+Epoch 81
+Epoch 82
+Epoch 83
+Epoch 84
+Epoch 85
+Epoch 86
+Epoch 87
+Epoch 88
+Epoch 89
+Epoch 90
+-----------------------
+Epoch 90
+Total Cost: 18950.2135298
+Training Accuracy: 0.866063523683
+Validation Accuracy: 0.848462177889
+-----------------------
+Epoch 91
+Epoch 92
+Epoch 93
+Epoch 94
+Epoch 95
+Epoch 96
+Epoch 97
+Epoch 98
+Epoch 99
+Epoch 100
+-----------------------
+Epoch 100
+Total Cost: 18927.4561926
+Training Accuracy: 0.866395528995
+Validation Accuracy: 0.848240509837
+-----------------------
+Epoch 101
+Epoch 102
+Epoch 103
+Epoch 104
+Epoch 105
+Epoch 106
+Epoch 107
+Epoch 108
+Epoch 109
+Epoch 110
+-----------------------
+Epoch 110
+Total Cost: 19017.086972
+Training Accuracy: 0.860640770252
+Validation Accuracy: 0.842006095871
+-----------------------
+Epoch 111
+Epoch 112
+Epoch 113
+Epoch 114
+Epoch 115
+Epoch 116
+Epoch 117
+Epoch 118
+Epoch 119
+Epoch 120
+-----------------------
+Epoch 120
+Total Cost: 18885.2400954
+Training Accuracy: 0.858842408145
+Validation Accuracy: 0.839512330285
+-----------------------
+Epoch 121
+Epoch 122
+Epoch 123
+Epoch 124
+Epoch 125
+Epoch 126
+Epoch 127
+Epoch 128
+Epoch 129
+Epoch 130
+-----------------------
+Epoch 130
+Total Cost: 18921.1552873
+Training Accuracy: 0.862992474546
+Validation Accuracy: 0.844693821003
+-----------------------
+Epoch 131
+Epoch 132
+Epoch 133
+Epoch 134
+Epoch 135
+Epoch 136
+Epoch 137
+Epoch 138
+Epoch 139
+Epoch 140
+-----------------------
+Epoch 140
+Total Cost: 18857.1151165
+Training Accuracy: 0.857210048694
+Validation Accuracy: 0.838930451649
+-----------------------
+Epoch 141
+Epoch 142
+Epoch 143
+Epoch 144
+Epoch 145
+Epoch 146
+Epoch 147
+Epoch 148
+Epoch 149
+Epoch 150
+-----------------------
+Epoch 150
+Total Cost: 18855.665518
+Training Accuracy: 0.864154493139
+Validation Accuracy: 0.84463840399
+-----------------------
+Epoch 151
+Epoch 152
+Epoch 153
+Epoch 154
+Epoch 155
+Epoch 156
+Epoch 157
+Epoch 158
+Epoch 159
+Epoch 160
+-----------------------
+Epoch 160
+Total Cost: 18774.0723518
+Training Accuracy: 0.863877822045
+Validation Accuracy: 0.843696314769
+-----------------------
+Epoch 161
+Epoch 162
+Epoch 163
+Epoch 164
+Epoch 165
+Epoch 166
+Epoch 167
+Epoch 168
+Epoch 169
+Epoch 170
+-----------------------
+Epoch 170
+Total Cost: 18758.1880406
+Training Accuracy: 0.853087649402
+Validation Accuracy: 0.833499584372
+-----------------------
+Epoch 171
+Epoch 172
+Epoch 173
+Epoch 174
+Epoch 175
+Epoch 176
+Epoch 177
+Epoch 178
+Epoch 179
+Epoch 180
+-----------------------
+Epoch 180
+Total Cost: 18758.116501
+Training Accuracy: 0.861775121735
+Validation Accuracy: 0.8417013023
+-----------------------
+Epoch 181
+Epoch 182
+Epoch 183
+Epoch 184
+Epoch 185
+Epoch 186
+Epoch 187
+Epoch 188
+Epoch 189
+Epoch 190
+-----------------------
+Epoch 190
+Total Cost: 18866.7504793
+Training Accuracy: 0.864541832669
+Validation Accuracy: 0.846300914381
+-----------------------
+Epoch 191
+Epoch 192
+Epoch 193
+Epoch 194
+Epoch 195
+Epoch 196
+Epoch 197
+Epoch 198
+Epoch 199
+Epoch 200
+-----------------------
+Epoch 200
+Total Cost: 18749.4796833
+Training Accuracy: 0.86409915892
+Validation Accuracy: 0.844943197562
+-----------------------
+Epoch 201
+Epoch 202
+Epoch 203
+Epoch 204
+Epoch 205
+Epoch 206
+Epoch 207
+Epoch 208
+Epoch 209
+Epoch 210
+-----------------------
+Epoch 210
+Total Cost: 18747.6037514
+Training Accuracy: 0.864043824701
+Validation Accuracy: 0.84408423386
+-----------------------
+Epoch 211
+Epoch 212
+Epoch 213
+Epoch 214
+Epoch 215
+Epoch 216
+Epoch 217
+Epoch 218
+Epoch 219
+Epoch 220
+-----------------------
+Epoch 220
+Total Cost: 18811.9676481
+Training Accuracy: 0.863075475874
+Validation Accuracy: 0.846190080355
+-----------------------
+Epoch 221
+Epoch 222
+Epoch 223
+Epoch 224
+Epoch 225
+Epoch 226
+Epoch 227
+Epoch 228
+Epoch 229
+Epoch 230
+-----------------------
+Epoch 230
+Total Cost: 18855.9118768
+Training Accuracy: 0.867557547587
+Validation Accuracy: 0.847353837628
+-----------------------
+Epoch 231
+Epoch 232
+Epoch 233
+Epoch 234
+Epoch 235
+Epoch 236
+Epoch 237
+Epoch 238
+Epoch 239
+Epoch 240
+-----------------------
+Epoch 240
+Total Cost: 18855.965437
+Training Accuracy: 0.868968570164
+Validation Accuracy: 0.851981158216
+-----------------------
+Epoch 241
+Epoch 242
+Epoch 243
+Epoch 244
+Epoch 245
+Epoch 246
+Epoch 247
+Epoch 248
+Epoch 249
+Epoch 250
+-----------------------
+Epoch 250
+Total Cost: 18977.0473789
+Training Accuracy: 0.870628596724
+Validation Accuracy: 0.853699085619
+-----------------------
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 1
+Candidate Size 43863
+vocab size: 14590
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 14
+Average story length 5
+Testing Size 35616
+Testing Accuracy: 0.856693620845
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 2
+Candidate Size 43863
+vocab size: 14596
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 20
+Average story length 8
+Training Size 56988
+Validation Size 57078
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+-----------------------
+Epoch 10
+Total Cost: 19826.1299144
+Training Accuracy: 0.936758615849
+Validation Accuracy: 0.935264024668
+-----------------------
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+-----------------------
+Epoch 20
+Total Cost: 19013.1760246
+Training Accuracy: 0.936477854987
+Validation Accuracy: 0.934265391219
+-----------------------
+Epoch 21
+Epoch 22
+Epoch 23
+Epoch 24
+Epoch 25
+Epoch 26
+Epoch 27
+Epoch 28
+Epoch 29
+Epoch 30
+-----------------------
+Epoch 30
+Total Cost: 18911.0492047
+Training Accuracy: 0.936056713694
+Validation Accuracy: 0.934966186622
+-----------------------
+Epoch 31
+Epoch 32
+Epoch 33
+Epoch 34
+Epoch 35
+Epoch 36
+Epoch 37
+Epoch 38
+Epoch 39
+Epoch 40
+-----------------------
+Epoch 40
+Total Cost: 18751.3584449
+Training Accuracy: 0.93658314031
+Validation Accuracy: 0.934317950874
+-----------------------
+Epoch 41
+Epoch 42
+Epoch 43
+Epoch 44
+Epoch 45
+Epoch 46
+Epoch 47
+Epoch 48
+Epoch 49
+Epoch 50
+-----------------------
+Epoch 50
+Total Cost: 18833.3541799
+Training Accuracy: 0.936951638942
+Validation Accuracy: 0.934352990644
+-----------------------
+Epoch 51
+Epoch 52
+Epoch 53
+Epoch 54
+Epoch 55
+Epoch 56
+Epoch 57
+Epoch 58
+Epoch 59
+Epoch 60
+-----------------------
+Epoch 60
+Total Cost: 18879.4087579
+Training Accuracy: 0.937162209588
+Validation Accuracy: 0.935088825817
+-----------------------
+Epoch 61
+Epoch 62
+Epoch 63
+Epoch 64
+Epoch 65
+Epoch 66
+Epoch 67
+Epoch 68
+Epoch 69
+Epoch 70
+-----------------------
+Epoch 70
+Total Cost: 18834.7509316
+Training Accuracy: 0.936512950095
+Validation Accuracy: 0.934247871334
+-----------------------
+Epoch 71
+Epoch 72
+Epoch 73
+Epoch 74
+Epoch 75
+Epoch 76
+Epoch 77
+Epoch 78
+Epoch 79
+Epoch 80
+-----------------------
+Epoch 80
+Total Cost: 18816.5778442
+Training Accuracy: 0.936179546571
+Validation Accuracy: 0.932916360069
+-----------------------
+Epoch 81
+Epoch 82
+Epoch 83
+Epoch 84
+Epoch 85
+Epoch 86
+Epoch 87
+Epoch 88
+Epoch 89
+Epoch 90
+-----------------------
+Epoch 90
+Total Cost: 18999.0022813
+Training Accuracy: 0.936741068295
+Validation Accuracy: 0.933774834437
+-----------------------
+Epoch 91
+Epoch 92
+Epoch 93
+Epoch 94
+Epoch 95
+Epoch 96
+Epoch 97
+Epoch 98
+Epoch 99
+Epoch 100
+-----------------------
+Epoch 100
+Total Cost: 19059.9205192
+Training Accuracy: 0.936214641679
+Validation Accuracy: 0.932163005011
+-----------------------
+Epoch 101
+Epoch 102
+Epoch 103
+Epoch 104
+Epoch 105
+Epoch 106
+Epoch 107
+Epoch 108
+Epoch 109
+Epoch 110
+-----------------------
+Epoch 110
+Total Cost: 19136.8287951
+Training Accuracy: 0.936232189233
+Validation Accuracy: 0.932548442482
+-----------------------
+Epoch 111
+Epoch 112
+Epoch 113
+Epoch 114
+Epoch 115
+Epoch 116
+Epoch 117
+Epoch 118
+Epoch 119
+Epoch 120
+-----------------------
+Epoch 120
+Total Cost: 19388.3611938
+Training Accuracy: 0.933266652629
+Validation Accuracy: 0.929955499492
+-----------------------
+Epoch 121
+Epoch 122
+Epoch 123
+Epoch 124
+Epoch 125
+Epoch 126
+Epoch 127
+Epoch 128
+Epoch 129
+Epoch 130
+-----------------------
+Epoch 130
+Total Cost: 19301.1883266
+Training Accuracy: 0.935126693339
+Validation Accuracy: 0.929955499492
+-----------------------
+Epoch 131
+Epoch 132
+Epoch 133
+Epoch 134
+Epoch 135
+Epoch 136
+Epoch 137
+Epoch 138
+Epoch 139
+Epoch 140
+-----------------------
+Epoch 140
+Total Cost: 19200.6211789
+Training Accuracy: 0.932196251842
+Validation Accuracy: 0.928483829146
+-----------------------
+Epoch 141
+Epoch 142
+Epoch 143
+Epoch 144
+Epoch 145
+Epoch 146
+Epoch 147
+Epoch 148
+Epoch 149
+Epoch 150
+-----------------------
+Epoch 150
+Total Cost: 19460.5681411
+Training Accuracy: 0.936056713694
+Validation Accuracy: 0.930901573286
+-----------------------
+Epoch 151
+Epoch 152
+Epoch 153
+Epoch 154
+Epoch 155
+Epoch 156
+Epoch 157
+Epoch 158
+Epoch 159
+Epoch 160
+-----------------------
+Epoch 160
+Total Cost: 19650.9114231
+Training Accuracy: 0.936390117218
+Validation Accuracy: 0.931847647079
+-----------------------
+Epoch 161
+Epoch 162
+Epoch 163
+Epoch 164
+Epoch 165
+Epoch 166
+Epoch 167
+Epoch 168
+Epoch 169
+Epoch 170
+-----------------------
+Epoch 170
+Total Cost: 19512.4952709
+Training Accuracy: 0.935618024847
+Validation Accuracy: 0.930498615929
+-----------------------
+Epoch 171
+Epoch 172
+Epoch 173
+Epoch 174
+Epoch 175
+Epoch 176
+Epoch 177
+Epoch 178
+Epoch 179
+Epoch 180
+-----------------------
+Epoch 180
+Total Cost: 19548.0228807
+Training Accuracy: 0.935723310171
+Validation Accuracy: 0.929955499492
+-----------------------
+Epoch 181
+Epoch 182
+Epoch 183
+Epoch 184
+Epoch 185
+Epoch 186
+Epoch 187
+Epoch 188
+Epoch 189
+Epoch 190
+-----------------------
+Epoch 190
+Total Cost: 19586.4093556
+Training Accuracy: 0.935249526216
+Validation Accuracy: 0.930235817653
+-----------------------
+Epoch 191
+Epoch 192
+Epoch 193
+Epoch 194
+Epoch 195
+Epoch 196
+Epoch 197
+Epoch 198
+Epoch 199
+Epoch 200
+-----------------------
+Epoch 200
+Total Cost: 19742.8823323
+Training Accuracy: 0.935688215063
+Validation Accuracy: 0.931304530642
+-----------------------
+Epoch 201
+Epoch 202
+Epoch 203
+Epoch 204
+Epoch 205
+Epoch 206
+Epoch 207
+Epoch 208
+Epoch 209
+Epoch 210
+-----------------------
+Epoch 210
+Total Cost: 20025.7802946
+Training Accuracy: 0.935547834632
+Validation Accuracy: 0.931392130068
+-----------------------
+Epoch 211
+Epoch 212
+Epoch 213
+Epoch 214
+Epoch 215
+Epoch 216
+Epoch 217
+Epoch 218
+Epoch 219
+Epoch 220
+-----------------------
+Epoch 220
+Total Cost: 20424.9292691
+Training Accuracy: 0.93286305889
+Validation Accuracy: 0.928623988227
+-----------------------
+Epoch 221
+Epoch 222
+Epoch 223
+Epoch 224
+Epoch 225
+Epoch 226
+Epoch 227
+Epoch 228
+Epoch 229
+Epoch 230
+-----------------------
+Epoch 230
+Total Cost: 20375.1286261
+Training Accuracy: 0.936302379448
+Validation Accuracy: 0.931374610183
+-----------------------
+Epoch 231
+Epoch 232
+Epoch 233
+Epoch 234
+Epoch 235
+Epoch 236
+Epoch 237
+Epoch 238
+Epoch 239
+Epoch 240
+-----------------------
+Epoch 240
+Total Cost: 20207.1258019
+Training Accuracy: 0.935407454201
+Validation Accuracy: 0.930288377308
+-----------------------
+Epoch 241
+Epoch 242
+Epoch 243
+Epoch 244
+Epoch 245
+Epoch 246
+Epoch 247
+Epoch 248
+Epoch 249
+Epoch 250
+-----------------------
+Epoch 250
+Total Cost: 20324.4780717
+Training Accuracy: 0.935179336001
+Validation Accuracy: 0.928764147307
+-----------------------
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 2
+Candidate Size 43863
+vocab size: 14596
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 20
+Average story length 8
+Testing Size 56784
+Testing Accuracy: 0.9342772612
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 3
+Candidate Size 43863
+vocab size: 14803
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 204
+Average story length 95
+Training Size 139116
+Validation Size 142656
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+-----------------------
+Epoch 10
+Total Cost: 10496.9565688
+Training Accuracy: 0.983165128382
+Validation Accuracy: 0.66981409825
+-----------------------
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+-----------------------
+Epoch 20
+Total Cost: 3402.40610099
+Training Accuracy: 0.995435463929
+Validation Accuracy: 0.664858120233
+-----------------------
+Epoch 21
+Epoch 22
+Epoch 23
+Epoch 24
+Epoch 25
+Epoch 26
+Epoch 27
+Epoch 28
+Epoch 29
+Epoch 30
+-----------------------
+Epoch 30
+Total Cost: 2575.45664065
+Training Accuracy: 0.996477759568
+Validation Accuracy: 0.669400515926
+-----------------------
+Epoch 31
+Epoch 32
+Epoch 33
+Epoch 34
+Epoch 35
+Epoch 36
+Epoch 37
+Epoch 38
+Epoch 39
+Epoch 40
+-----------------------
+Epoch 40
+Total Cost: 3018.0289406
+Training Accuracy: 0.997333160815
+Validation Accuracy: 0.674447622252
+-----------------------
+Epoch 41
+Epoch 42
+Epoch 43
+Epoch 44
+Epoch 45
+Epoch 46
+Epoch 47
+Epoch 48
+Epoch 49
+Epoch 50
+-----------------------
+Epoch 50
+Total Cost: 2173.20976708
+Training Accuracy: 0.998166997326
+Validation Accuracy: 0.681135038134
+-----------------------
+Epoch 51
+Epoch 52
+Epoch 53
+Epoch 54
+Epoch 55
+Epoch 56
+Epoch 57
+Epoch 58
+Epoch 59
+Epoch 60
+-----------------------
+Epoch 60
+Total Cost: 1571.00487678
+Training Accuracy: 0.999022398574
+Validation Accuracy: 0.674861204576
+-----------------------
+Epoch 61
+Epoch 62
+Epoch 63
+Epoch 64
+Epoch 65
+Epoch 66
+Epoch 67
+Epoch 68
+Epoch 69
+Epoch 70
+-----------------------
+Epoch 70
+Total Cost: 1673.79179526
+Training Accuracy: 0.998583915581
+Validation Accuracy: 0.675996803499
+-----------------------
+Epoch 71
+Epoch 72
+Epoch 73
+Epoch 74
+Epoch 75
+Epoch 76
+Epoch 77
+Epoch 78
+Epoch 79
+Epoch 80
+-----------------------
+Epoch 80
+Total Cost: 2710.06374554
+Training Accuracy: 0.998591103827
+Validation Accuracy: 0.677153432032
+-----------------------
+Epoch 81
+Epoch 82
+Epoch 83
+Epoch 84
+Epoch 85
+Epoch 86
+Epoch 87
+Epoch 88
+Epoch 89
+Epoch 90
+-----------------------
+Epoch 90
+Total Cost: 1611.86394286
+Training Accuracy: 0.999633399465
+Validation Accuracy: 0.67052209511
+-----------------------
+Epoch 91
+Epoch 92
+Epoch 93
+Epoch 94
+Epoch 95
+Epoch 96
+Epoch 97
+Epoch 98
+Epoch 99
+Epoch 100
+-----------------------
+Epoch 100
+Total Cost: 1477.34619069
+Training Accuracy: 0.998734868743
+Validation Accuracy: 0.668916834904
+-----------------------
+Epoch 101
+Epoch 102
+Epoch 103
+Epoch 104
+Epoch 105
+Epoch 106
+Epoch 107
+Epoch 108
+Epoch 109
+Epoch 110
+-----------------------
+Epoch 110
+Total Cost: 2335.78848224
+Training Accuracy: 0.999511199287
+Validation Accuracy: 0.672849371916
+-----------------------
+Epoch 111
+Epoch 112
+Epoch 113
+Epoch 114
+Epoch 115
+Epoch 116
+Epoch 117
+Epoch 118
+Epoch 119
+Epoch 120
+-----------------------
+Epoch 120
+Total Cost: 1120.62703668
+Training Accuracy: 0.998353891716
+Validation Accuracy: 0.668328005832
+-----------------------
+Epoch 121
+Epoch 122
+Epoch 123
+Epoch 124
+Epoch 125
+Epoch 126
+Epoch 127
+Epoch 128
+Epoch 129
+Epoch 130
+-----------------------
+Epoch 130
+Total Cost: 2396.45388893
+Training Accuracy: 0.997692573104
+Validation Accuracy: 0.673340062808
+-----------------------
+Epoch 131
+Epoch 132
+Epoch 133
+Epoch 134
+Epoch 135
+Epoch 136
+Epoch 137
+Epoch 138
+Epoch 139
+Epoch 140
+-----------------------
+Epoch 140
+Total Cost: 3361.22276654
+Training Accuracy: 0.999367434371
+Validation Accuracy: 0.667514860924
+-----------------------
+Epoch 141
+Epoch 142
+Epoch 143
+Epoch 144
+Epoch 145
+Epoch 146
+Epoch 147
+Epoch 148
+Epoch 149
+Epoch 150
+-----------------------
+Epoch 150
+Total Cost: 3608.30035137
+Training Accuracy: 0.999022398574
+Validation Accuracy: 0.667697117541
+-----------------------
+Epoch 151
+Epoch 152
+Epoch 153
+Epoch 154
+Epoch 155
+Epoch 156
+Epoch 157
+Epoch 158
+Epoch 159
+Epoch 160
+-----------------------
+Epoch 160
+Total Cost: 2388.45360787
+Training Accuracy: 0.998648609793
+Validation Accuracy: 0.670108512786
+-----------------------
+Epoch 161
+Epoch 162
+Epoch 163
+Epoch 164
+Epoch 165
+Epoch 166
+Epoch 167
+Epoch 168
+Epoch 169
+Epoch 170
+-----------------------
+Epoch 170
+Total Cost: 2283.63112918
+Training Accuracy: 0.998720492251
+Validation Accuracy: 0.666077837595
+-----------------------
+Epoch 171
+Epoch 172
+Epoch 173
+Epoch 174
+Epoch 175
+Epoch 176
+Epoch 177
+Epoch 178
+Epoch 179
+Epoch 180
+-----------------------
+Epoch 180
+Total Cost: 4042.92537948
+Training Accuracy: 0.999094281032
+Validation Accuracy: 0.667430742485
+-----------------------
+Epoch 181
+Epoch 182
+Epoch 183
+Epoch 184
+Epoch 185
+Epoch 186
+Epoch 187
+Epoch 188
+Epoch 189
+Epoch 190
+-----------------------
+Epoch 190
+Total Cost: 2442.8142393
+Training Accuracy: 0.999144598752
+Validation Accuracy: 0.670466016151
+-----------------------
+Epoch 191
+Epoch 192
+Epoch 193
+Epoch 194
+Epoch 195
+Epoch 196
+Epoch 197
+Epoch 198
+Epoch 199
+Epoch 200
+-----------------------
+Epoch 200
+Total Cost: 2659.53257732
+Training Accuracy: 0.999626211219
+Validation Accuracy: 0.672113335576
+-----------------------
+Epoch 201
+Epoch 202
+Epoch 203
+Epoch 204
+Epoch 205
+Epoch 206
+Epoch 207
+Epoch 208
+Epoch 209
+Epoch 210
+-----------------------
+Epoch 210
+Total Cost: 2136.10205172
+Training Accuracy: 0.999295551914
+Validation Accuracy: 0.67253392777
+-----------------------
+Epoch 211
+Epoch 212
+Epoch 213
+Epoch 214
+Epoch 215
+Epoch 216
+Epoch 217
+Epoch 218
+Epoch 219
+Epoch 220
+-----------------------
+Epoch 220
+Total Cost: 2929.32048202
+Training Accuracy: 0.999705281923
+Validation Accuracy: 0.674685957829
+-----------------------
+Epoch 221
+Epoch 222
+Epoch 223
+Epoch 224
+Epoch 225
+Epoch 226
+Epoch 227
+Epoch 228
+Epoch 229
+Epoch 230
+-----------------------
+Epoch 230
+Total Cost: 3390.70158171
+Training Accuracy: 0.999460881566
+Validation Accuracy: 0.670437976671
+-----------------------
+Epoch 231
+Epoch 232
+Epoch 233
+Epoch 234
+Epoch 235
+Epoch 236
+Epoch 237
+Epoch 238
+Epoch 239
+Epoch 240
+-----------------------
+Epoch 240
+Total Cost: 2547.29043261
+Training Accuracy: 0.999072716294
+Validation Accuracy: 0.676263178555
+-----------------------
+Epoch 241
+Epoch 242
+Epoch 243
+Epoch 244
+Epoch 245
+Epoch 246
+Epoch 247
+Epoch 248
+Epoch 249
+Epoch 250
+-----------------------
+Epoch 250
+Total Cost: 2392.1797613
+Training Accuracy: 0.999669340694
+Validation Accuracy: 0.673655506954
+-----------------------
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 3
+Candidate Size 43863
+vocab size: 14803
+Longest sentence length 21
+Longest candidate sentence length 13
+Longest story length 204
+Average story length 95
+Testing Size 141612
+Testing Accuracy: 0.685231477558
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 4
+Candidate Size 43863
+vocab size: 14635
+Longest sentence length 11
+Longest candidate sentence length 13
+Longest story length 18
+Average story length 14
+Training Size 21042
+Validation Size 21174
+Epoch 1
+Epoch 2
+Epoch 3
+Epoch 4
+Epoch 5
+Epoch 6
+Epoch 7
+Epoch 8
+Epoch 9
+Epoch 10
+-----------------------
+Epoch 10
+Total Cost: 6432.03553724
+Training Accuracy: 0.949339416405
+Validation Accuracy: 0.563993577028
+-----------------------
+Epoch 11
+Epoch 12
+Epoch 13
+Epoch 14
+Epoch 15
+Epoch 16
+Epoch 17
+Epoch 18
+Epoch 19
+Epoch 20
+-----------------------
+Epoch 20
+Total Cost: 284.618604565
+Training Accuracy: 0.998146564015
+Validation Accuracy: 0.566213280438
+-----------------------
+Epoch 21
+Epoch 22
+Epoch 23
+Epoch 24
+Epoch 25
+Epoch 26
+Epoch 27
+Epoch 28
+Epoch 29
+Epoch 30
+-----------------------
+Epoch 30
+Total Cost: 278.32264261
+Training Accuracy: 0.998241612014
+Validation Accuracy: 0.56668555776
+-----------------------
+Epoch 31
+Epoch 32
+Epoch 33
+Epoch 34
+Epoch 35
+Epoch 36
+Epoch 37
+Epoch 38
+Epoch 39
+Epoch 40
+-----------------------
+Epoch 40
+Total Cost: 147.802651765
+Training Accuracy: 0.998479232012
+Validation Accuracy: 0.566638330027
+-----------------------
+Epoch 41
+Epoch 42
+Epoch 43
+Epoch 44
+Epoch 45
+Epoch 46
+Epoch 47
+Epoch 48
+Epoch 49
+Epoch 50
+-----------------------
+Epoch 50
+Total Cost: 51.7539326875
+Training Accuracy: 0.999192092006
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 51
+Epoch 52
+Epoch 53
+Epoch 54
+Epoch 55
+Epoch 56
+Epoch 57
+Epoch 58
+Epoch 59
+Epoch 60
+-----------------------
+Epoch 60
+Total Cost: 7.46620481141
+Training Accuracy: 0.999809904002
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 61
+Epoch 62
+Epoch 63
+Epoch 64
+Epoch 65
+Epoch 66
+Epoch 67
+Epoch 68
+Epoch 69
+Epoch 70
+-----------------------
+Epoch 70
+Total Cost: 10.3521199763
+Training Accuracy: 0.999762380002
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 71
+Epoch 72
+Epoch 73
+Epoch 74
+Epoch 75
+Epoch 76
+Epoch 77
+Epoch 78
+Epoch 79
+Epoch 80
+-----------------------
+Epoch 80
+Total Cost: 19.4452615033
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 81
+Epoch 82
+Epoch 83
+Epoch 84
+Epoch 85
+Epoch 86
+Epoch 87
+Epoch 88
+Epoch 89
+Epoch 90
+-----------------------
+Epoch 90
+Total Cost: 0.0144458689667
+Training Accuracy: 1.0
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 91
+Epoch 92
+Epoch 93
+Epoch 94
+Epoch 95
+Epoch 96
+Epoch 97
+Epoch 98
+Epoch 99
+Epoch 100
+-----------------------
+Epoch 100
+Total Cost: 17.3292299728
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 101
+Epoch 102
+Epoch 103
+Epoch 104
+Epoch 105
+Epoch 106
+Epoch 107
+Epoch 108
+Epoch 109
+Epoch 110
+-----------------------
+Epoch 110
+Total Cost: 0.0124297318996
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 111
+Epoch 112
+Epoch 113
+Epoch 114
+Epoch 115
+Epoch 116
+Epoch 117
+Epoch 118
+Epoch 119
+Epoch 120
+-----------------------
+Epoch 120
+Total Cost: 339.629784455
+Training Accuracy: 0.999619808003
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 121
+Epoch 122
+Epoch 123
+Epoch 124
+Epoch 125
+Epoch 126
+Epoch 127
+Epoch 128
+Epoch 129
+Epoch 130
+-----------------------
+Epoch 130
+Total Cost: 0.0136317990715
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 131
+Epoch 132
+Epoch 133
+Epoch 134
+Epoch 135
+Epoch 136
+Epoch 137
+Epoch 138
+Epoch 139
+Epoch 140
+-----------------------
+Epoch 140
+Total Cost: 0.1330192703
+Training Accuracy: 1.0
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 141
+Epoch 142
+Epoch 143
+Epoch 144
+Epoch 145
+Epoch 146
+Epoch 147
+Epoch 148
+Epoch 149
+Epoch 150
+-----------------------
+Epoch 150
+Total Cost: 0.00627848793602
+Training Accuracy: 1.0
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 151
+Epoch 152
+Epoch 153
+Epoch 154
+Epoch 155
+Epoch 156
+Epoch 157
+Epoch 158
+Epoch 159
+Epoch 160
+-----------------------
+Epoch 160
+Total Cost: 0.0189234522215
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 161
+Epoch 162
+Epoch 163
+Epoch 164
+Epoch 165
+Epoch 166
+Epoch 167
+Epoch 168
+Epoch 169
+Epoch 170
+-----------------------
+Epoch 170
+Total Cost: 471.682669824
+Training Accuracy: 0.989117004087
+Validation Accuracy: 0.566307735903
+-----------------------
+Epoch 171
+Epoch 172
+Epoch 173
+Epoch 174
+Epoch 175
+Epoch 176
+Epoch 177
+Epoch 178
+Epoch 179
+Epoch 180
+-----------------------
+Epoch 180
+Total Cost: 0.0148229383875
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 181
+Epoch 182
+Epoch 183
+Epoch 184
+Epoch 185
+Epoch 186
+Epoch 187
+Epoch 188
+Epoch 189
+Epoch 190
+-----------------------
+Epoch 190
+Total Cost: 0.00224601770583
+Training Accuracy: 1.0
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 191
+Epoch 192
+Epoch 193
+Epoch 194
+Epoch 195
+Epoch 196
+Epoch 197
+Epoch 198
+Epoch 199
+Epoch 200
+-----------------------
+Epoch 200
+Total Cost: 0.0159270408689
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 201
+Epoch 202
+Epoch 203
+Epoch 204
+Epoch 205
+Epoch 206
+Epoch 207
+Epoch 208
+Epoch 209
+Epoch 210
+-----------------------
+Epoch 210
+Total Cost: 6.30106610908
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 211
+Epoch 212
+Epoch 213
+Epoch 214
+Epoch 215
+Epoch 216
+Epoch 217
+Epoch 218
+Epoch 219
+Epoch 220
+-----------------------
+Epoch 220
+Total Cost: 0.0047499893189
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 221
+Epoch 222
+Epoch 223
+Epoch 224
+Epoch 225
+Epoch 226
+Epoch 227
+Epoch 228
+Epoch 229
+Epoch 230
+-----------------------
+Epoch 230
+Total Cost: 0.0733032429987
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 231
+Epoch 232
+Epoch 233
+Epoch 234
+Epoch 235
+Epoch 236
+Epoch 237
+Epoch 238
+Epoch 239
+Epoch 240
+-----------------------
+Epoch 240
+Total Cost: 0.00589261015978
+Training Accuracy: 1.0
+Validation Accuracy: 0.566732785492
+-----------------------
+Epoch 241
+Epoch 242
+Epoch 243
+Epoch 244
+Epoch 245
+Epoch 246
+Epoch 247
+Epoch 248
+Epoch 249
+Epoch 250
+-----------------------
+Epoch 250
+Total Cost: 3.7686133704
+Training Accuracy: 0.999952476
+Validation Accuracy: 0.566732785492
+-----------------------
+/root/tf_0.12.1/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Started Task: 4
+Candidate Size 43863
+vocab size: 14635
+Longest sentence length 11
+Longest candidate sentence length 13
+Longest story length 18
+Average story length 14
+Testing Size 20988
+Testing Accuracy: 0.571755288736
