@@ -45,7 +45,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 2	  |  100				|  99.99				|  99.99			 |  78.85
 3     |  87.52				|  57.17				|  58.94			 |  ---
 4	  |  100				|  56.67				|  57.17			 |  ---
-5	  |  94.38				|  81.11				|  82.60			 |  ---
+5	  |  94.38				|  81.11				|  82.60 (85.33)	 |  ---
 
 ### Personalized Dialog tasks (small set)
 
@@ -59,11 +59,11 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 
 ### Multi-task learning experiments on PT5
 
-Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (multi-profile model)
+Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (multi-profile model) [trained on small set]
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
-male, young			|		99.66		  |			79.66		  |		80.38	  	   |		77.70	
-female, young		|		99.51		  |			79.96		  |		80.15		   |		77.14
-male, middle-aged	|		99.68		  |			80.07		  |		80.29		   |		77.59		
-female, middle-aged	|		99.60		  |			79.88		  |		80.21	  	   |		77.80	
-male, elderly		|		99.61		  |			80.04		  |		80.57	  	   |		77.82	
-female, elderly		|		99.40		  |			79.57		  |		80.41	  	   |		77.52	
+male, young			|		99.66		  |			79.66		  |		80.38	  	   |		85.04 [77.70]	
+female, young		|		99.51		  |			79.96		  |		80.15		   |		84.91 [77.14]
+male, middle-aged	|		99.68		  |			80.07		  |		80.29		   |		84.71 [77.59]		
+female, middle-aged	|		99.60		  |			79.88		  |		80.21	  	   |		85.14 [77.80]	
+male, elderly		|		99.61		  |			80.04		  |		80.57	  	   |		85.46 [77.82]	
+female, elderly		|		99.40		  |			79.57		  |		80.41	  	   |		84.95 [77.52]	
