@@ -1,4 +1,5 @@
 # Modied End-to-end Memory Networks for Dialog
+Instructions and script to download models/experiments coming soon.
 
 ### Personalized Dialog tasks (full set)
 
