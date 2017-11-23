@@ -1,7 +1,7 @@
 # Personalization in Goal-Oriented Dialog
 This repository contains code for the paper ["Personalization in Goal-Oriented Dialog"](https://arxiv.org/abs/1706.07503) by Chaitanya Joshi, Fei Mi and Boi Faltings. We introduce a set of 5 tasks for testing end-to-end dialog systems in a goal-oriented setting with a focus on personalization of conversation. We also provide baselines using various models and publicize our implementations and experimental results through this repository.
 
-The arXiv paper does not contain details on the new **split memory** model yet. The latest version of the paper which was submitted to the NIPS '18 workshop on Conversational AI can be found [here](http://chaitjo.github.io/res/Personalization_in_Goal-oriented_Dialog.pdf).
+Update: The paper has been accepted as a poster at NIPS 2017 [Workshop on Conversational AI](http://alborz-geramifard.com/workshops/nips17-Conversational-AI/Main.html)!
 
 ## Dataset
 The Personalized Dialog dataset can be downloaded using `build_data.py`. Alternatively, it is accessable using [this link](https://www.dropbox.com/s/4i9u4y24pt3paba/personalized-dialog-dataset.tar.gz?dl=1) or through the [ParlAI framework](http://parl.ai/) for dialog AI research. 
@@ -37,7 +37,7 @@ Along with the train, dev and test sets, we also include a knowledge base file (
 In addition to the small and full datasets, we also provide a split-by-profile dataset where each directory contains 1000 dialogs each for training, development and testing for a specific user profile. This set can be used to analyze multi-task learning capabilities of models.
 
 ## Models
-We provide our implementations of two models- Memory Networks (`MemN2N/`) and Supervised Embeddings (`supervised-embedding/`). Each directory contains scripts, experimental logs and model checkpoints. Instructions on using a models are given in its README.
+We provide our implementations of three models- Supervised Embeddings (`supervised-embedding/`), Memory Networks (`MemN2N/`) and Memory Networks with *split-memory* architecure (`MemN2N-modified/`). Each directory contains scripts, experimental logs and model checkpoints. Instructions on using a models are given in its README.
 
 ## License
 The dataset is released under Creative Commons Attribution 3.0 Unported license. A copy of this license is included with the data.
