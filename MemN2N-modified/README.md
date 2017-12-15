@@ -1,6 +1,8 @@
 # Modied End-to-end Memory Networks for Dialog
 Instructions and script to download models/experiments coming soon.
 
+![Memory Network with split memory architecture](/img/memNN.png)
+
 ### Personalized Dialog tasks (full set)
 
 Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Testing Accuracy(OOV)
