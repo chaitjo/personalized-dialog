@@ -32,6 +32,8 @@ For example (for Task 1):
 
 The goal of the tasks is to predict the bot utterances, that can be sentences or API calls (sentences starting with the special token "api_call").
 
+![Sample Dialogs](/img/dialog.png)
+
 Along with the train, dev and test sets, we also include a knowledge base file (personalized-dialog-kb-all.txt) that contain all entities appearing in dialogs for tasks 1-5. We also include a file containing the candidates to select the answer from (personalized-dialog-candidates.txt) for tasks 1-5, that is simply made of all the bot utterances in train, dev, test for these tasks. 
 
 In addition to the small and full datasets, we also provide a split-by-profile dataset where each directory contains 1000 dialogs each for training, development and testing for a specific user profile. This set can be used to analyze multi-task learning capabilities of models.
