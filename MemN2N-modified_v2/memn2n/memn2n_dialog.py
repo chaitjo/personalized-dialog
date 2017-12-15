@@ -243,9 +243,11 @@ class MemN2NDialog(object):
                 if self._nonlin:
                     u_k_nonlin = self._nonlin(u_k)
                     u_k_profile_nonlin = self._nonlin(u_k_profile)
-
-                u.append(u_k_nonlin)
-                u_profile.append(u_k_profile_nonlin)
+                    u.append(u_k_nonlin)
+                    u_profile.append(u_k_profile_nonlin)
+                else:
+                    u.append(u_k)
+                    u_profile.append(u_k_profile)
 
             candidates_emb=tf.nn.embedding_lookup(self.W, self._candidates)
             candidates_emb_sum=tf.reduce_sum(candidates_emb,1)
