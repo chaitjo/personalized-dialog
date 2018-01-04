@@ -1,4 +1,6 @@
 runs/
+runs.tar
+runs_split-memory.tar.gz
 runs.tar.gz
 
 # Byte-compiled / optimized / DLL files

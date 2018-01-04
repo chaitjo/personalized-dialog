@@ -24,10 +24,8 @@ def untar(fname):
 
 if __name__ == '__main__':
     print('[building experimental data]')
-    # Download the data from https://www.dropbox.com/s/uhp7u5kmtyrbvkh/runs.tar.gz?dl=1
-    fname = 'runs.tar.gz'
-    url = 'https://www.dropbox.com/s/uhp7u5kmtyrbvkh/' + fname + '?dl=1'
+    # Download the data from https://www.dropbox.com/s/jk33mo1ueanoen9/runs_split-memory.tar.gz?dl=1
+    fname = 'runs_split-memory.tar.gz'
+    url = 'https://www.dropbox.com/s/jk33mo1ueanoen9/' + fname + '?dl=1'
     download(url, fname)
     untar(fname)
-
-    #TODO: Change names

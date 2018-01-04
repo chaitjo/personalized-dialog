@@ -1,6 +1,7 @@
 data/
 log/
 checkpoints/
+checkpoints.tar
 checkpoints.tar.gz
 
 # Byte-compiled / optimized / DLL files
