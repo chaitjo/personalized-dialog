@@ -1,7 +1,32 @@
-# Modied End-to-end Memory Networks for Dialog
-Instructions and script to download models/experiments coming soon.
+# End-to-end Memory Networks with *Split Memory* Architecture
+Implementation of split memory architecture for Memory Networks described in [Personalization in Goal-oriented Dialog](https://arxiv.org/abs/1706.07503) in Tensorflow. Tested on the personalized dialog dataset. 
+
+Experimental logs and best performing models for each task can be downloaded using the `build_experiments.py` script.
 
 ![Memory Network with split memory architecture](/img/memNN.png)
+
+Profile attributes and conversation history are modeled in two separate memories. The outputs from both memories are summed to get the final response.
+
+## Usage
+
+Train the model
+```
+python single_dialog.py --train True --task_id 1
+```
+
+Test the trained model
+```
+python single_dialog.py --train False --task_id 1
+```
+
+## Requirements
+
+* tensorflow 0.12.1
+* scikit-learn
+* six
+* scipy
+
+## Results
 
 ### Personalized Dialog tasks (full set)
 

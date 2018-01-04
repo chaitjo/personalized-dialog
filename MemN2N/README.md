@@ -1,5 +1,5 @@
 # End-to-end Memory Networks for Dialog
-Implementation of Memory Networks from [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI Dialog dataset and the Personalized Dialogdataset. 
+Implementation of Memory Networks described in [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/abs/1605.07683) in Tensorflow. Tested on the bAbI dialog dataset and the personalized dialog dataset. 
 
 Experimental logs and best performing models for each task can be downloaded using the `build_experiments.py` script.
 
@@ -57,7 +57,7 @@ Task  |  Training Accuracy  |  Validation Accuracy  |  Testing Accuracy	 |  Test
 4	  |  100				|  56.67				|  57.17			 |  ---
 5	  |  99.58				|  77.59				|  77.74			 |  ---
 
-### Multi-task learning experiments on PT5
+### Multi-task learning experiments
 
 Profile				|  Training Accuracy  |	 Validation Accuracy  |	 Testing Accuracy  |  Testing Accuracy (multi-profile model) [trained on small set]
 --------------------|---------------------|-----------------------|--------------------|--------------------------------
