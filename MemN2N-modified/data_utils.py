@@ -5,11 +5,13 @@ import re
 import numpy as np
 import tensorflow as tf
 
-stop_words=set(["a","an","the"])
+stop_words = set(["a","an","the"])
 
 
 def load_candidates(data_dir, task_id):
-    assert task_id > 0 and task_id < 7
+    """Load bot response candidates."""
+    assert task_id > 0 and task_id < 6
+    
     candidates=[]
     candidates_f=None
     candid_dic={}
@@ -19,15 +21,14 @@ def load_candidates(data_dir, task_id):
             candid_dic[line.strip().split(' ',1)[1]] = i
             line=tokenize(line.strip())[1:]
             candidates.append(line)
-    # return candidates,dict((' '.join(cand),i) for i,cand in enumerate(candidates))
     return candidates,candid_dic
 
 
 def load_dialog_task(data_dir, task_id, candid_dic, isOOV):
-    '''Load the nth task. There are 5 tasks in total.
+    """Load the nth task. There are 5 tasks in total.
 
     Returns a tuple containing the training and testing data for the task.
-    '''
+    """
     assert task_id > 0 and task_id < 6
 
     files = os.listdir(data_dir)
@@ -46,10 +47,11 @@ def load_dialog_task(data_dir, task_id, candid_dic, isOOV):
 
 
 def tokenize(sent):
-    '''Return the tokens of a sentence including punctuation.
+    """Return the tokens of a sentence including punctuation.
+    
     >>> tokenize('Bob dropped the apple. Where is the apple?')
     ['Bob', 'dropped', 'the', 'apple', '.', 'Where', 'is', 'the', 'apple']
-    '''
+    """
     sent=sent.lower()
     if sent=='<silence>':
         return [sent]
@@ -60,114 +62,36 @@ def tokenize(sent):
         result=result[:-1]
     return result
 
-
-# def parse_dialogs(lines,candid_dic):
-#     '''
-#         Parse dialogs provided in the babi tasks format
-#     '''
-#     data=[]
-#     context=[]
-#     u=None
-#     r=None
-#     for line in lines:
-#         line=str.lower(line.strip())
-#         if line:
-#             nid, line = line.split(' ', 1)
-#             nid = int(nid)
-#             if '\t' in line:
-#                 u, r = line.split('\t')
-#                 u = tokenize(u)
-#                 r = tokenize(r)
-#                 # temporal encoding, and utterance/response encoding
-#                 u.append('$u')
-#                 u.append('#'+str(nid))
-#                 r.append('$r')
-#                 r.append('#'+str(nid))
-#                 context.append(u)
-#                 context.append(r)
-#             else:
-#                 r=tokenize(line)
-#                 r.append('$r')
-#                 r.append('#'+str(nid))
-#                 context.append(r)
-#         else:
-#             context=[x for x in context[:-2] if x]
-#             u=u[:-2]
-#             r=r[:-2]
-#             key=' '.join(r)
-#             if key in candid_dic:
-#                 r=candid_dic[key]
-#                 data.append((context, u,  r))
-#             context=[]
-#     return data
-
-# def parse_dialogs_per_response(lines,candid_dic):
-#     '''
-#         Parse dialogs provided in the babi tasks format
-#     '''
-#     data=[]
-#     context=[]
-#     u=None
-#     r=None
-#     for line in lines:
-#         line=line.strip()
-#         if line:
-#             nid, line = line.split(' ', 1)
-#             nid = int(nid)
-#             if '\t' in line:
-#                 u, r = line.split('\t')
-#                 a = candid_dic[r]
-#                 u = tokenize(u)
-#                 r = tokenize(r)
-#                 # temporal encoding, and utterance/response encoding
-#                 # data.append((context[:],u[:],candid_dic[' '.join(r)]))
-#                 data.append((context[:],u[:],a))
-#                 u.append('$u')
-#                 u.append('#'+str(nid))
-#                 r.append('$r')
-#                 r.append('#'+str(nid))
-#                 context.append(u)
-#                 context.append(r)
-#             else:
-#                 r=tokenize(line)
-#                 r.append('$r')
-#                 r.append('#'+str(nid))
-#                 context.append(r)
-#         else:
-#             # clear context
-#             context=[]
-#     return data
-
 def parse_dialogs_per_response(lines,candid_dic):
-    '''
-        Parse dialogs provided in the babi tasks format
-    '''
-    data=[]
-    context=[]
-    context_profile=[]
-    u=None
-    r=None
+    """Parse dialogs provided in the personalized dialog tasks format"""
+    data = []
+    context = []
+    context_profile = []
+    u = None
+    r = None
     for line in lines:
         line=line.strip()
         if line:
             nid, line = line.split(' ', 1)
             nid = int(nid)
             if nid == 1:
+                # Process profile attributes
                 attribs = line.split(' ')
                 for attrib in attribs:
                     r=tokenize(attrib)
+                    # Add temporal encoding, and utterance/response encoding
                     r.append('$r')
                     r.append('#'+str(nid))
                     context_profile.append(r)
 
             else:
+                # Process conversation turns
                 if '\t' in line:
+                    # Process turn containing bot response
                     u, r = line.split('\t')
                     a = candid_dic[r]
                     u = tokenize(u)
                     r = tokenize(r)
-                    # temporal encoding, and utterance/response encoding
-                    # data.append((context[:],u[:],candid_dic[' '.join(r)]))
                     data.append((context_profile[:],context[:],u[:],a))
                     u.append('$u')
                     u.append('#'+str(nid))
@@ -176,12 +100,13 @@ def parse_dialogs_per_response(lines,candid_dic):
                     context.append(u)
                     context.append(r)
                 else:
+                    # Process turn without bot response
                     r=tokenize(line)
                     r.append('$r')
                     r.append('#'+str(nid))
                     context.append(r)
         else:
-            # clear context
+            # Clear contexts
             context=[]
             context_profile=[]
     return data
@@ -189,9 +114,12 @@ def parse_dialogs_per_response(lines,candid_dic):
 
 
 def get_dialogs(f,candid_dic):
-    '''Given a file name, read the file, retrieve the dialogs, and then convert the sentences into a single dialog.
-    If max_length is supplied, any stories longer than max_length tokens will be discarded.
-    '''
+    """Given a file name, read the file, retrieve the dialogs, and then convert 
+    the sentences into a single dialog.
+    
+    If max_length is supplied, any stories longer than max_length tokens will 
+    be discarded.
+    """
     with open(f) as f:
         return parse_dialogs_per_response(f.readlines(),candid_dic)
 
@@ -214,9 +142,9 @@ def vectorize_candidates(candidates,word_idx,sentence_size):
     return tf.constant(C,shape=shape)
 
 
-def vectorize_data(data, word_idx, sentence_size, batch_size, candidates_size, max_memory_size):
-    """
-    Vectorize stories and queries.
+def vectorize_data(data, word_idx, 
+                   sentence_size, batch_size, candidates_size, max_memory_size):
+    """Vectorize stories and queries.
 
     If a sentence length < sentence_size, the sentence will be padded with 0's.
 
@@ -243,10 +171,10 @@ def vectorize_data(data, word_idx, sentence_size, batch_size, candidates_size, m
             ls = max(0, sentence_size - len(sentence))
             ss.append([word_idx[w] if w in word_idx else 0 for w in sentence] + [0] * ls)
 
-        # take only the most recent sentences that fit in memory
+        # Take only the most recent sentences that fit in memory
         ss = ss[::-1][:memory_size][::-1]
 
-        # pad to memory_size
+        # Pad to memory_size
         lm = max(0, memory_size - len(ss))
         for _ in range(lm):
             ss.append([0] * sentence_size)
