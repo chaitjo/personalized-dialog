@@ -143,9 +143,14 @@ class chatBot(object):
             vocab_file = open('vocab'+str(self.task_id)+'.obj', 'rb')
             vocab = pickle.load(vocab_file)
         else:
-            vocab = reduce(lambda x, y: x | y, (set(list(chain.from_iterable(s)) + q) for p, s, q, a in data))
-            vocab |= reduce(lambda x, y: x | y, (set(list(chain.from_iterable(p)) + q) for p, s, q, a in data))
-            vocab |= reduce(lambda x, y: x | y, (set(candidate) for candidate in candidates) )
+            vocab = reduce(lambda x, y: x | y,
+                           (set(list(chain.from_iterable(s)) + q) 
+                             for p, s, q, a in data))
+            vocab |= reduce(lambda x, y: x | y, 
+                            (set(list(chain.from_iterable(p)) + q) 
+                             for p, s, q, a in data))
+            vocab |= reduce(lambda x, y: x | y, 
+                            (set(candidate) for candidate in candidates) )
             vocab = sorted(vocab)
         
         self.word_idx = dict((c, i + 1) for i, c in enumerate(vocab))
