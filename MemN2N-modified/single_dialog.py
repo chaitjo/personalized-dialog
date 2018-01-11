@@ -116,7 +116,7 @@ class chatBot(object):
         
         self.build_vocab(data,candidates, self.save_vocab, self.load_vocab)
         
-        self.candidates_vec=vectorize_candidates(
+        self.candidates_vec = vectorize_candidates(
             candidates,self.word_idx, self.candidate_sentence_size)
         
         optimizer = tf.train.AdamOptimizer(
@@ -164,7 +164,7 @@ class chatBot(object):
         self.sentence_size = max(query_size, self.sentence_size)  # for the position
         
         # Print parameters
-        print("vocab size:",self.vocab_size)
+        print("vocab size:", self.vocab_size)
         print("Longest sentence length", self.sentence_size)
         print("Longest candidate sentence length", self.candidate_sentence_size)
         print("Longest story length", max_story_size)
@@ -290,7 +290,7 @@ class chatBot(object):
         self.sess.close()
 
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     model_dir = "task" + str(FLAGS.task_id) + "_" + FLAGS.model_dir
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)

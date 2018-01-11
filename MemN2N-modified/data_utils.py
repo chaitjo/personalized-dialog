@@ -11,7 +11,7 @@ stop_words = set(["a","an","the"])
 def load_candidates(data_dir, task_id):
     """Load bot response candidates."""
     assert task_id > 0 and task_id < 6
-    
+
     candidates=[]
     candidates_f=None
     candid_dic={}
@@ -63,7 +63,7 @@ def tokenize(sent):
     return result
 
 def parse_dialogs_per_response(lines,candid_dic):
-    """Parse dialogs provided in the personalized dialog tasks format"""
+    """Parse dialogs provided in the personalized dialog tasks format."""
     data = []
     context = []
     context_profile = []
@@ -123,6 +123,7 @@ def get_dialogs(f,candid_dic):
     with open(f) as f:
         return parse_dialogs_per_response(f.readlines(),candid_dic)
 
+
 def vectorize_candidates_sparse(candidates,word_idx):
     shape=(len(candidates),len(word_idx)+1)
     indices=[]
@@ -133,6 +134,7 @@ def vectorize_candidates_sparse(candidates,word_idx):
             values.append(1.0)
     return tf.SparseTensor(indices,values,shape)
 
+
 def vectorize_candidates(candidates,word_idx,sentence_size):
     shape=(len(candidates),sentence_size)
     C=[]
@@ -142,9 +144,9 @@ def vectorize_candidates(candidates,word_idx,sentence_size):
     return tf.constant(C,shape=shape)
 
 
-def vectorize_data(data, word_idx, 
-                   sentence_size, batch_size, candidates_size, max_memory_size):
-    """Vectorize stories and queries.
+def vectorize_data(data, word_idx, sentence_size, 
+                   batch_size, candidates_size, max_memory_size):
+    """Vectorize profile, stories and queries.
 
     If a sentence length < sentence_size, the sentence will be padded with 0's.
 
