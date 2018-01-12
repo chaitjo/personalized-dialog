@@ -1,7 +1,7 @@
 # Personalization in Goal-Oriented Dialog
 This repository contains code for the paper ["Personalization in Goal-Oriented Dialog"](https://arxiv.org/abs/1706.07503) by Chaitanya Joshi, Fei Mi and Boi Faltings. We introduce a set of 5 tasks for testing end-to-end dialog systems in a goal-oriented setting with a focus on personalization of conversation. We also provide baselines using various models and publicize our implementations and experimental results through this repository.
 
-Check out the accompanying blog post [here](https://chaitjo.github.io/personalization-in-dialog/).
+**Check out the accompanying blog post [here](https://chaitjo.github.io/personalization-in-dialog/).**
 
 **Update**: The paper was published at the NIPS 2017 [Workshop on Conversational AI](http://alborz-geramifard.com/workshops/nips17-Conversational-AI/Main.html)!
 
