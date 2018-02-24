@@ -41,7 +41,7 @@ Along with the train, dev and test sets, we also include a knowledge base file (
 In addition to the small and full datasets, we also provide a split-by-profile dataset where each directory contains 1000 dialogs each for training, development and testing for a specific user profile. This set can be used to analyze multi-task learning capabilities of models.
 
 ## Models
-We provide our implementations of three models- Supervised Embeddings (`supervised-embedding/`), Memory Networks (`MemN2N/`) and Memory Networks with *split-memory* architecure (`MemN2N-modified/`). Each directory contains scripts, experimental logs and model checkpoints. Instructions on using a models are given in its README.
+We provide our implementations of three models- Supervised Embeddings (`supervised-embedding/`), Memory Networks (`MemN2N/`) and Memory Networks with *split-memory* architecure (`MemN2N-split-memory/`). Each directory contains scripts, experimental logs and model checkpoints. Instructions on using a models are given in its README.
 
 ## License
 The dataset is released under Creative Commons Attribution 3.0 Unported license. A copy of this license is included with the data.
