@@ -145,20 +145,20 @@ class chatBot(object):
         else:
             vocab = reduce(lambda x, y: x | y,
                            (set(list(chain.from_iterable(s)) + q) 
-                             for p, s, q, a in data))
+                             for p, u, b, f, q, a in data))
             vocab |= reduce(lambda x, y: x | y, 
                             (set(list(chain.from_iterable(p)) + q) 
-                             for p, s, q, a in data))
+                             for p, u, b, f, q, a in data))
             vocab |= reduce(lambda x, y: x | y, 
                             (set(candidate) for candidate in candidates) )
             vocab = sorted(vocab)
         
         self.word_idx = dict((c, i + 1) for i, c in enumerate(vocab))
-        max_story_size = max(map(len, (s for _, s, _, _ in data)))
-        mean_story_size = int(np.mean([ len(s) for _, s, _, _ in data ]))
-        self.sentence_size = max(map(len, chain.from_iterable(s for _, s, _, _ in data)))
+        max_story_size = max(map(len, (u for p, u, b, f, q, a in data)))
+        mean_story_size = int(np.mean([ len(u) for p, u, b, f, q, a in data ]))
+        self.sentence_size = max(map(len, chain.from_iterable(u for p, u, b, f, q, a in data)))
         self.candidate_sentence_size=max(map(len,candidates))
-        query_size = max(map(len, (q for _, _, q, _ in data)))
+        query_size = max(map(len, (q for p, u, b, f, q, a in data)))
         self.memory_size = min(self.memory_size, max_story_size)
         self.vocab_size = len(self.word_idx) + 1  # +1 for nil word
         self.sentence_size = max(query_size, self.sentence_size)  # for the position
@@ -180,14 +180,14 @@ class chatBot(object):
 
         Performs validation at given evaluation intervals.
         """
-        trainP, trainS, trainQ, trainA = vectorize_data(
+        trainP, trainU, trainB, trainF, trainQ, trainA = vectorize_data(
             self.trainData, self.word_idx, self.sentence_size, 
             self.batch_size, self.n_cand, self.memory_size)
-        valP, valS, valQ, valA = vectorize_data(
+        valP, valU, valB, valF, valQ, valA = vectorize_data(
             self.valData, self.word_idx, self.sentence_size, 
             self.batch_size, self.n_cand, self.memory_size)
-        n_train = len(trainS)
-        n_val = len(valS)
+        n_train = len(trainU)
+        n_val = len(valU)
         print("Training Size", n_train)
         print("Validation Size", n_val)
         tf.set_random_seed(self.random_state)
@@ -203,15 +203,17 @@ class chatBot(object):
             total_cost = 0.0
             for start, end in batches:
                 p = trainP[start:end]
-                s = trainS[start:end]
+                u = trainU[start:end]
+                b = trainB[start:end]
+                f = trainF[start:end]
                 q = trainQ[start:end]
                 a = trainA[start:end]
-                cost_t = self.model.batch_fit(p, s, q, a)
+                cost_t = self.model.batch_fit(p, u, b, f, q, a)
                 total_cost += cost_t
             if t % self.evaluation_interval == 0:
                 # Perform validation
-                train_preds = self.batch_predict(trainP,trainS,trainQ,n_train)
-                val_preds = self.batch_predict(valP,valS,valQ,n_val)
+                train_preds = self.batch_predict(trainP, trainU, trainB, trainF, trainQ, n_train)
+                val_preds = self.batch_predict(valP, valU, valB, valF, valQ, n_val)
                 train_acc = metrics.accuracy_score(np.array(train_preds), trainA)
                 val_acc = metrics.accuracy_score(val_preds, valA)
                 print('-----------------------')
@@ -249,13 +251,13 @@ class chatBot(object):
         else:
             print("...no checkpoint found...")
         
-        testP, testS, testQ, testA = vectorize_data(
+        testP, testU, testB, testF, testQ, testA = vectorize_data(
             self.testData, self.word_idx, self.sentence_size, 
             self.batch_size, self.n_cand, self.memory_size)
-        n_test = len(testS)
+        n_test = len(testU)
         print("Testing Size", n_test)
         
-        test_preds = self.batch_predict(testP, testS, testQ, n_test)
+        test_preds = self.batch_predict(testP, testU, testB, testF, testQ, n_test)
         test_acc = metrics.accuracy_score(test_preds, testA)
         print("Testing Accuracy:", test_acc)
         
@@ -264,7 +266,7 @@ class chatBot(object):
         # for pred in test_preds:
         #    print(pred, self.indx2candid[pred])
 
-    def batch_predict(self,P,S,Q,n):
+    def batch_predict(self, P, U, B, F, Q, n):
         """Predict answers over the passed data in batches.
 
         Args:
@@ -280,9 +282,11 @@ class chatBot(object):
         for start in range(0, n, self.batch_size):
             end = start + self.batch_size
             p = P[start:end]
-            s = S[start:end]
+            U = U[start:end]
+            B = B[start:end]
+            F = F[start:end]
             q = Q[start:end]
-            pred = self.model.predict(p, s, q)
+            pred = self.model.predict(p, u, b, f, q)
             preds += list(pred)
         return preds
 
