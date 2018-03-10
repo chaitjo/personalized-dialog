@@ -83,7 +83,7 @@ class MemN2NDialog(object):
               
         # Calculate cross entropy
         # dimensions: (batch_size, candidates_size)
-        logits = self._inference(self._profile, self._stories, self._queries)
+        logits = self._inference(self._profiles, self._user_utterances, self._bot_responses, self._facts, self._queries)
         cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(
             logits, self._answers, name="cross_entropy")
         cross_entropy_sum = tf.reduce_sum(cross_entropy, name="cross_entropy_sum")
@@ -123,10 +123,14 @@ class MemN2NDialog(object):
 
     def _build_inputs(self):
         """Define input placeholders"""
-        self._profile = tf.placeholder(
-            tf.int32, [None, None, self._sentence_size], name="profile")
-        self._stories = tf.placeholder(
-            tf.int32, [None, None, self._sentence_size], name="stories")
+        self._profiles = tf.placeholder(
+            tf.int32, [None, None, self._sentence_size], name="profiles")
+        self._user_utterances = tf.placeholder(
+            tf.int32, [None, None, self._sentence_size], name="user_utterances")
+        self._bot_responses = tf.placeholder(
+            tf.int32, [None, None, self._sentence_size], name="bot_responses")
+        self._facts = tf.placeholder(
+            tf.int32, [None, None, self._sentence_size], name="facts")
         self._queries = tf.placeholder(
             tf.int32, [None, self._sentence_size], name="queries")
         self._answers = tf.placeholder(tf.int32, [None], name="answers")
@@ -142,98 +146,136 @@ class MemN2NDialog(object):
             self.W = tf.Variable(W, name="W")
         self._nil_vars = set([self.A.name,self.W.name])
         
-    def _inference(self, profile, stories, queries):
+    def _inference(self, profile, user_utterances, bot_responses, facts, queries):
         """Forward pass through the model"""
         with tf.variable_scope(self._name):
             q_emb = tf.nn.embedding_lookup(self.A, queries)  # Queries vector
             
-            # Initial states of memory controllers for conversation history and profile attributes
-            u_0 = tf.reduce_sum(q_emb, 1)
-            u = [u_0]
-            u_profile = [u_0]
+            # Initial states of memory controllers
+            u_profile = [tf.reduce_sum(q_emb, 1)]   # Profile memory controller
+            u_user = [tf.reduce_sum(q_emb, 1)]      # User utterances memory controller
+            u_bot = [tf.reduce_sum(q_emb, 1)]       # Bot responses memory controller
+            u_facts = [tf.reduce_sum(q_emb, 1)]     # KB facts memory controller
+            u_memories = [tf.reduce_sum(q_emb, 1)]  # Memory of memories controller
 
             # Iterate over memories for number of hops
             for count in range(self._hops):
-                m_emb = tf.nn.embedding_lookup(self.A, stories)  # Stories vector 
-                m_emb_profile = tf.nn.embedding_lookup(self.A, profile)  # Profiles vector
+                m_emb_profile = tf.nn.embedding_lookup(self.A, profile)       # Profiles vector
+                m_emb_user = tf.nn.embedding_lookup(self.A, user_utterances)  # User utterences vector 
+                m_emb_bot = tf.nn.embedding_lookup(self.A, bot_responses)     # Bot responses vector 
+                m_emb_facts = tf.nn.embedding_lookup(self.A, facts)           # KB facts vector 
                 
-                m = tf.reduce_sum(m_emb, 2)  # Conversation history memory
                 m_profile = tf.reduce_sum(m_emb_profile, 2)  # Profile attributes memory
-                
-                # Hack to get around no reduce_dot
-                u_temp = tf.transpose(tf.expand_dims(u[-1], -1), [0, 2, 1])
-                u_temp_profile = tf.transpose(tf.expand_dims(u_profile[-1], -1), [0, 2, 1])
-                dotted = tf.reduce_sum(m * u_temp, 2)  
-                dotted_profile = tf.reduce_sum(m_profile * u_temp_profile, 2)
+                m_user = tf.reduce_sum(m_emb_user, 2)        # User utterances memory
+                m_bot = tf.reduce_sum(m_emb_bot, 2)          # Bot response memory
+                m_facts = tf.reduce_sum(m_emb_facts, 2)      # KB facts memory
 
-                # Calculate probability vectors over both memories
-                probs = tf.nn.softmax(dotted)
+                # Hack to get around no reduce_dot
+                u_profile_temp = tf.transpose(tf.expand_dims(u_profile[-1], -1), [0, 2, 1])
+                u_user_temp = tf.transpose(tf.expand_dims(u_user[-1], -1), [0, 2, 1])
+                u_bot_temp = tf.transpose(tf.expand_dims(u_bot[-1], -1), [0, 2, 1])
+                u_facts_temp = tf.transpose(tf.expand_dims(u_facts[-1], -1), [0, 2, 1])
+                # Perform reduce_dot
+                dotted_profile = tf.reduce_sum(m_profile * u_profile_temp, 2)
+                dotted_user = tf.reduce_sum(m_user * u_user_temp, 2)
+                dotted_bot = tf.reduce_sum(m_bot * u_bot_temp, 2)
+                dotted_facts = tf.reduce_sum(m_facts * u_facts_temp, 2)
+
+                # Calculate probability vectors over memories
                 probs_profile = tf.nn.softmax(dotted_profile)
+                probs_user = tf.nn.softmax(dotted_user)
+                probs_bot = tf.nn.softmax(dotted_bot)
+                probs_facts = tf.nn.softmax(dotted_facts)
                 
                 # # Uncomment below to view attention values over memories during inference:
                 # probs = tf.Print(
                 #     probs, ['memory', count, tf.shape(probs), probs], summarize=200)
-                # probs_profile = tf.Print(
-                #     probs_profile, 
-                #     ['profile', count, tf.shape(probs_profile), probs_profile], 
-                #     summarize=200)
 
-                probs_temp = tf.transpose(tf.expand_dims(probs, -1), [0, 2, 1])
-                probs_temp_profile = tf.transpose(tf.expand_dims(probs_profile, -1), [0, 2, 1])
-                c_temp = tf.transpose(m, [0, 2, 1])
-                c_temp_profile = tf.transpose(m_profile, [0, 2, 1])
-                # Compute returned vector
-                o_k = tf.reduce_sum(c_temp * probs_temp, 2)
-                o_k_profile = tf.reduce_sum(c_temp_profile * probs_temp_profile, 2)
+                probs_profile_temp = tf.transpose(tf.expand_dims(probs_profile, -1), [0, 2, 1])
+                probs_user_temp = tf.transpose(tf.expand_dims(probs_user, -1), [0, 2, 1])
+                probs_bot_temp = tf.transpose(tf.expand_dims(probs_bot, -1), [0, 2, 1])
+                probs_facts_temp = tf.transpose(tf.expand_dims(probs_facts, -1), [0, 2, 1])
+                c_profile_temp = tf.transpose(m_profile, [0, 2, 1])
+                c_user_temp = tf.transpose(m_user, [0, 2, 1])
+                c_bot_temp = tf.transpose(m_bot, [0, 2, 1])
+                c_facts_temp = tf.transpose(m_facts, [0, 2, 1])
+                # Compute returned vectors
+                o_k_profile = tf.reduce_sum(c_profile_temp * probs_profile_temp, 2)
+                o_k_user = tf.reduce_sum(c_user_temp * probs_user_temp, 2)
+                o_k_bot = tf.reduce_sum(c_bot_temp * probs_bot_temp, 2)
+                o_k_facts = tf.reduce_sum(c_facts_temp * probs_facts_temp, 2)
 
-                # Update controller states
-                u_k = tf.matmul(u[-1], self.H) + o_k
+                # Computations for memory of memories
+                m_memories = tf.stack([o_k_profile, o_k_user, o_k_bot, o_k_facts], axis=1)
+                u_memories_temp = tf.transpose(tf.expand_dims(u_memories[-1], -1), [0, 2, 1])
+                dotted_memories = tf.reduce_sum(m_memories * u_memories_temp, 2)
+                probs_memories = tf.nn.softmax(dotted_memories)
+                probs_memories_temp = tf.transpose(tf.expand_dims(probs_memories, -1), [0, 2, 1])
+                c_memories_temp = tf.transpose(m_memories, [0, 2, 1])
+                o_k_memories = tf.reduce_sum(c_memories_temp * probs_memories_temp, 2)
+
+                # Update memory controller states
                 u_k_profile = tf.matmul(u_profile[-1], self.H) + o_k_profile
-                
+                u_k_user = tf.matmul(u_user[-1], self.H) + o_k_user
+                u_k_bot = tf.matmul(u_bot[-1], self.H) + o_k_bot
+                u_k_facts = tf.matmul(u_facts[-1], self.H) + o_k_facts
+                u_k_memories = tf.matmul(u_memories[-1], self.H) + o_k_memories
+
                 # Apply nonlinearity
                 if self._nonlin:
-                    u_k = self._nonlin(u_k)
                     u_k_profile = self._nonlin(u_k_profile)
+                    u_k_user = self._nonlin(u_k_user)
+                    u_k_bot = self._nonlin(u_k_bot)
+                    u_k_facts = self._nonlin(u_k_facts)
+                    u_k_memories = self._nonlin(u_k_memories)
 
-                u.append(u_k)
                 u_profile.append(u_k_profile)
+                u_user.append(u_k_user)
+                u_bot.append(u_k_bot)
+                u_facts.append(u_k_facts)
+                u_memories.append(u_k_memories)
 
+            # Build candidate embbeddings matrix 
             candidates_emb=tf.nn.embedding_lookup(self.W, self._candidates)
             candidates_emb_sum=tf.reduce_sum(candidates_emb,1)
-            
-            u_final = tf.add(u_k, u_k_profile)
-            return tf.matmul(u_final,tf.transpose(candidates_emb_sum))
+            # Perform inference over candidate embeddings
+            return tf.matmul(u_k_memories, tf.transpose(candidates_emb_sum))
 
-    def batch_fit(self, profile, stories, queries, answers):
+    def batch_fit(self, profile, user_utterances, bot_responses, facts, queries, answers):
         """Runs the training algorithm over the passed batch
 
         Args:
             profiles: Tensor (None, sentence_size)
-            stories: Tensor (None, memory_size, sentence_size)
+            user_utterances: Tensor (None, memory_size, sentence_size)
+            bot_responses: Tensor (None, memory_size, sentence_size)
+            facts: Tensor (None, memory_size, sentence_size)
             queries: Tensor (None, sentence_size)
             answers: Tensor (None, vocab_size)
 
         Returns:
             loss: floating-point number, the loss computed for the batch
         """
-        feed_dict = {self._profile: profile, self._stories: stories, 
+        feed_dict = {self._profile: profile, self._user_utterances: user_utterances,
+                     self._bot_responses: bot_responses, self._facts: facts,
                      self._queries: queries, self._answers: answers}
         loss, _ = self._sess.run([self.loss_op, self.train_op], feed_dict=feed_dict)
         return loss
 
-    def predict(self, profile, stories, queries):
+    def predict(self, profile, user_utterances, bot_responses, facts, queries):
         """Predicts answers as one-hot encoding.
 
         Args:
             profiles: Tensor (None, sentence_size)
-            stories: Tensor (None, memory_size, sentence_size)
+            user_utterances: Tensor (None, memory_size, sentence_size)
+            bot_responses: Tensor (None, memory_size, sentence_size)
+            facts: Tensor (None, memory_size, sentence_size)
             queries: Tensor (None, sentence_size)
 
         Returns:
             answers: Tensor (None, vocab_size)
         """
-        feed_dict = {self._profile: profile, self._stories: stories, 
-                     self._queries: queries}
+        feed_dict = {self._profile: profile, self._user_utterances: user_utterances,
+                     self._bot_responses: bot_responses, self._facts: facts, self._queries: queries}
         return self._sess.run(self.predict_op, feed_dict=feed_dict)
 
 
