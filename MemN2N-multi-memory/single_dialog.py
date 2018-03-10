@@ -271,7 +271,9 @@ class chatBot(object):
 
         Args:
             P: Tensor (None, sentence_size)
-            S: Tensor (None, memory_size, sentence_size)
+            U: Tensor (None, memory_size, sentence_size)
+            B: Tensor (None, memory_size, sentence_size)
+            F: Tensor (None, memory_size, sentence_size)
             Q: Tensor (None, sentence_size)
             n: int
 
