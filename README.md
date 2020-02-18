@@ -10,6 +10,11 @@ The Personalized Dialog dataset can be downloaded using `build_data.py`. Alterna
 
 Each of the tasks can also be generated from the [bAbI Dialog tasks](https://research.fb.com/projects/babi/) using the files in the `scripts/` directory.
 
+## Usage
+Please refer to the README file inside each model directory for exact installation and usage instructions.
+In general, we used Python 3.6 and TensorFlow 0.12.1 for our experiments.
+(Apologies for not providing the exact package versions of other libraries!)
+
 ## Dialog Format
 We provide two variants of the dataset- a full set with 6000/12000 dialogs each for training, development and testing; and a small set restricted to 1000 dialogs each for training, development and testing. We also include a second test set (with suffix -OOV.txt) that contains dialogs including entities not present in training and development sets.
 
